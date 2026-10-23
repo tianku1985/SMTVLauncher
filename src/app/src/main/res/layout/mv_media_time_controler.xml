@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/media_controler_background" >
+    android:background="@drawable/media_controler_background">
 
     <TextView
         android:id="@+id/tv_mv_name"
@@ -10,8 +10,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_gravity="center_vertical"
-        android:layout_marginTop="@dimen/sm_5"
         android:layout_marginLeft="@dimen/sm_30"
+        android:layout_marginTop="@dimen/sm_5"
         android:ellipsize="marquee"
         android:focusable="true"
         android:focusableInTouchMode="true"
@@ -23,8 +23,8 @@
         android:id="@+id/tv_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
         android:layout_marginTop="@dimen/sm_5"
         android:gravity="center_vertical"
         android:paddingRight="@dimen/sm_20"

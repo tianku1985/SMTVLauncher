@@ -1,9 +1,6 @@
 package com.shenma.tvlauncher.fragment;
 
-import java.lang.reflect.Field;
-
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -15,24 +12,27 @@ import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.shenma.tvlauncher.AboutActivity;
 import com.shenma.tvlauncher.ClearActivity;
 import com.shenma.tvlauncher.OtherActivity;
 import com.shenma.tvlauncher.R;
 import com.shenma.tvlauncher.SettingActActvity;
+import com.shenma.tvlauncher.SettingInvActivity;
 import com.shenma.tvlauncher.SettingPlayActivity;
 import com.shenma.tvlauncher.SettingRemoteActivity;
 import com.shenma.tvlauncher.SettingWallpaperActivity;
-//import com.shenma.tvlauncher.SettingWifiActivity;
 import com.shenma.tvlauncher.utils.ScaleAnimEffect;
+import com.shenma.tvlauncher.utils.SharePreferenceDataUtil;
 import com.shenma.tvlauncher.utils.Utils;
+
+import java.lang.reflect.Field;
+
 /**
  * @Description 设置
  * @author drowtram
  */
-public class SettingFragment extends BaseFragment implements OnFocusChangeListener,OnClickListener{
+public class SettingFragment extends BaseFragment implements OnFocusChangeListener, OnClickListener {
 	
 	private View view;
 	private FrameLayout[] st_fls;
@@ -51,10 +51,16 @@ public class SettingFragment extends BaseFragment implements OnFocusChangeListen
 			return null;
 		}
 		if(null == view){
-			view = inflater.inflate(R.layout.layout_setting, container,false);
+			if (SharePreferenceDataUtil.getSharedIntData(getActivity(), "Settings_page", 0) == 0){
+				view = inflater.inflate(R.layout.layout_setting, container,false);
+			}else{
+				view = inflater.inflate(R.layout.layout_settings, container,false);
+			}
 			init();
 		}else{
-			((ViewGroup)view.getParent()).removeView(view);
+			ViewGroup viewGroup = (ViewGroup) view.getParent();
+			if (viewGroup != null)
+				viewGroup.removeView(view);
 		}
 		return view;
 	}
@@ -138,49 +144,49 @@ public class SettingFragment extends BaseFragment implements OnFocusChangeListen
 			case 0:
 				width = width + 23;
 				height = height + 23;
-				x = 443+32;
+				x = 443+32 + 20;
 				y = 336+4;
 				break;
 			case 1:
 				width = width + 23;
 				height = height + 23;
-				x = 443+32;
+				x = 443+32 + 20;
 				y = 632+4;
 				break;
 			case 2:
 				width = width + 23;
 				height = height + 23;
-				x = 735+32;
+				x = 735+32 + 20;
 				y = 336+4;
 				break;
 			case 3:
 				width = width + 23;
 				height = height + 23;
-				x = 735+32;
+				x = 735+32 + 20;
 				y = 632+4;
 				break;
 			case 4:
 				width = width + 23;
 				height = height + 23;
-				x = 1028+32;
+				x = 1028+32 + 20;
 				y = 336+4;
 				break;
 			case 5:
 				width = width + 23;
 				height = height + 23;
-				x = 1028+32;
+				x = 1028+32 + 20;
 				y = 632+4;
 				break;
 			case 6:
 				width = width + 23;
 				height = height + 23;
-				x = 1320+32;
+				x = 1320+32 + 20;
 				y = 336+4;
 				break;
 			case 7:
 				width = width + 23;
 				height = height + 23;
-				x = 1320+32;
+				x = 1320+32 + 20;
 				y = 632+4;
 				break;
 			}
@@ -189,49 +195,49 @@ public class SettingFragment extends BaseFragment implements OnFocusChangeListen
 			case 0:
 				width = width + 15;
 				height = height + 15;
-				x = 260 + 35;
+				x = 260 + 35 + 13;
 				y = 189 + 35 - 19;
 				break;
 			case 1:
 				width = width + 15;
 				height = height + 15;
-				x = 260 + 35;
+				x = 260 + 35 + 13;
 				y = 386 + 35 - 19;
 				break;
 			case 2:
 				width = width + 15;
 				height = height + 15;
-				x = 455 + 35;
+				x = 455 + 35 + 13;
 				y = 189 + 35 - 19;
 				break;
 			case 3:
 				width = width + 15;
 				height = height + 15;
-				x = 455 + 35;
+				x = 455 + 35 + 13;
 				y = 386 + 35 - 19;
 				break;
 			case 4:
 				width = width + 15;
 				height = height + 15;
-				x = 650 + 35;
+				x = 650 + 35 + 13;
 				y = 189 + 35 - 19;
 				break;
 			case 5:
 				width = width + 15;
 				height = height + 15;
-				x = 650 + 35;
+				x = 650 + 35 + 13;
 				y = 386 + 35 - 19;
 				break;
 			case 6:
 				width = width + 15;
 				height = height + 15;
-				x = 845 + 35;
+				x = 845 + 35 + 13;
 				y = 189 + 35 - 19;
 				break;
 			case 7:
 				width = width + 15;
 				height = height + 15;
-				x = 845 + 35;
+				x = 845 + 35 + 13;
 				y = 386 + 35 - 19;
 				break;
 			}
@@ -243,40 +249,71 @@ public class SettingFragment extends BaseFragment implements OnFocusChangeListen
 	@Override
 	public void onClick(View v) {
 		Intent mIntent = new Intent();
-		switch (v.getId()) {
-		case R.id.setting_iv_remote:
-			mIntent.setClass(context, SettingRemoteActivity.class);
-			startActivity(mIntent);
-			break;
-		case R.id.setting_iv_network:
-			//mIntent.setClass(getActivity(), SettingWifiActivity.class);
-			//startActivity(mIntent);
-			break;
-		case R.id.setting_iv_play:
-			mIntent.setClass(getActivity(), SettingPlayActivity.class);
-			startActivity(mIntent);
-			break;
-		case R.id.setting_iv_clean:
-			mIntent.setClass(getActivity(), ClearActivity.class);
-			startActivity(mIntent);
-			break;
-		case R.id.setting_iv_wallpaper:
-			mIntent.setClass(getActivity(), SettingWallpaperActivity.class);
-			startActivity(mIntent);
-			break;
-		case R.id.setting_iv_other:
-			mIntent.setClass(getActivity(), OtherActivity.class);
-			startActivity(mIntent);
-			break;
-		case R.id.setting_iv_act:
-			mIntent.setClass(getActivity(), SettingActActvity.class);
-			startActivity(mIntent);
-			break;
-		case R.id.setting_iv_about:
-			mIntent.setClass(getActivity(), AboutActivity.class);
-			startActivity(mIntent);
-			break;
+		if (SharePreferenceDataUtil.getSharedIntData(getActivity(), "Settings_page", 0) == 0){
+			switch (v.getId()) {
+				case R.id.setting_iv_remote:
+					mIntent.setClass(context, SettingRemoteActivity.class);
+					startActivity(mIntent);
+					break;
+				case R.id.setting_iv_network:
+					int login_type = SharePreferenceDataUtil.getSharedIntData(getActivity(), "login_type", 0);
+					if (login_type == 2){
+						mIntent.setClass(context, SettingInvActivity.class);
+						startActivity(mIntent);
+					}else{
+						Utils.showToast(context, R.string.Not_yet_activated, R.drawable.toast_shut);
+					}
+					break;
+				case R.id.setting_iv_play:
+					mIntent.setClass(getActivity(), SettingPlayActivity.class);
+					startActivity(mIntent);
+					break;
+				case R.id.setting_iv_clean:
+					mIntent.setClass(getActivity(), ClearActivity.class);
+					startActivity(mIntent);
+					break;
+				case R.id.setting_iv_wallpaper:
+					mIntent.setClass(getActivity(), SettingWallpaperActivity.class);
+					startActivity(mIntent);
+					break;
+				case R.id.setting_iv_other:
+					mIntent.setClass(getActivity(), OtherActivity.class);
+					startActivity(mIntent);
+					break;
+				case R.id.setting_iv_act:
+					mIntent.setClass(getActivity(), SettingActActvity.class);
+					startActivity(mIntent);
+					break;
+				case R.id.setting_iv_about:
+					mIntent.setClass(getActivity(), AboutActivity.class);
+					startActivity(mIntent);
+					break;
+			}
+		}else{
+			switch (v.getId()) {
+				//四格设置页排版
+				case R.id.setting_iv_remote://播放设置
+					mIntent.setClass(getActivity(), SettingPlayActivity.class);
+					startActivity(mIntent);
+					break;
+
+				case R.id.setting_iv_play://删除记录
+					mIntent.setClass(getActivity(), ClearActivity.class);
+					startActivity(mIntent);
+					break;
+
+				case R.id.setting_iv_wallpaper://活动专区
+					mIntent.setClass(getActivity(), SettingActActvity.class);
+					startActivity(mIntent);
+					break;
+
+				case R.id.setting_iv_act://关于我们
+					mIntent.setClass(getActivity(), AboutActivity.class);
+					startActivity(mIntent);
+					break;
+			}
 		}
+
 		home.overridePendingTransition(android.R.anim.fade_in,
 				android.R.anim.fade_out);
 	}

@@ -1,18 +1,18 @@
 package com.forcetech.android;
 
 
-
 /**
- * @brief 加密地址获取
  * @author zengwenman
- *
+ * @brief 加密地址获取
  */
 public class MdUrl {
-	static{
-		System.loadLibrary("md");
-	}
-	public String getUrl(){
-		return getMdUrl();
-	}
-	private static native String getMdUrl();
+    static {
+        System.loadLibrary("md");
+    }
+
+    private static native String getMdUrl();
+
+    public String getUrl() {
+        return getMdUrl();
+    }
 }

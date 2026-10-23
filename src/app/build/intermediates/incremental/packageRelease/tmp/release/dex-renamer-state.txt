@@ -1,0 +1,4 @@
+#Fri Jan 17 22:19:38 CST 2025
+base.0=E\:\\KUMIAOTV1\\SMTVCESHI\\app\\build\\intermediates\\transforms\\dexMerger\\release\\0
+path.0=classes.dex
+renamed.0=classes.dex

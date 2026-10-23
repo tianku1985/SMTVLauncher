@@ -14,9 +14,10 @@
     </RelativeLayout>
 
     <RelativeLayout
+        android:gravity="center"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_marginLeft="@dimen/sm_40" >
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="-100dp" >
 
         <FrameLayout
             android:id="@+id/setting_fl_re_0"
@@ -41,7 +42,8 @@
                 android:focusable="true"
                 android:nextFocusUp="@id/rb_settings"
                 android:scaleType="fitXY"
-                android:src="@drawable/remote" />
+                android:src="@drawable/remote"
+                android:background="@drawable/white_borders"/>
         </FrameLayout>
 
         <FrameLayout
@@ -68,7 +70,8 @@
                 android:focusable="true"
                 android:nextFocusDown="@id/rb_bm_tvplay"
                 android:scaleType="fitXY"
-                android:src="@drawable/network" />
+                android:src="@drawable/network"
+                android:background="@drawable/white_borders"/>
         </FrameLayout>
 
         <FrameLayout
@@ -94,7 +97,8 @@
                 android:focusable="true"
                 android:nextFocusUp="@id/rb_settings"
                 android:scaleType="fitXY"
-                android:src="@drawable/play" />
+                android:src="@drawable/play"
+                android:background="@drawable/white_borders"/>
         </FrameLayout>
 
         <FrameLayout
@@ -121,7 +125,8 @@
                 android:focusable="true"
                 android:nextFocusDown="@id/rb_bm_tvplay"
                 android:scaleType="fitXY"
-                android:src="@drawable/clean" />
+                android:src="@drawable/clean"
+                android:background="@drawable/white_borders"/>
         </FrameLayout>
 
         <FrameLayout
@@ -147,7 +152,8 @@
                 android:focusable="true"
                 android:nextFocusUp="@id/rb_settings"
                 android:scaleType="fitXY"
-                android:src="@drawable/gexing" />
+                android:src="@drawable/gexing"
+                android:background="@drawable/white_borders"/>
         </FrameLayout>
 
         <FrameLayout
@@ -174,7 +180,8 @@
                 android:focusable="true"
                 android:nextFocusDown="@id/rb_bm_tvplay"
                 android:scaleType="fitXY"
-                android:src="@drawable/settings" />
+                android:src="@drawable/settings"
+                android:background="@drawable/white_borders"/>
         </FrameLayout>
 
         <FrameLayout
@@ -200,7 +207,8 @@
                 android:focusable="true"
                 android:nextFocusUp="@id/rb_settings"
                 android:scaleType="fitXY"
-                android:src="@drawable/huodong" />
+                android:src="@drawable/huodong"
+                android:background="@drawable/white_borders"/>
         </FrameLayout>
 
         <FrameLayout
@@ -227,7 +235,8 @@
                 android:focusable="true"
                 android:nextFocusDown="@id/rb_bm_tvplay"
                 android:scaleType="fitXY"
-                android:src="@drawable/about" />
+                android:src="@drawable/about"
+                android:background="@drawable/white_borders"/>
         </FrameLayout>
     </RelativeLayout>
 

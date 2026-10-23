@@ -1,34 +1,36 @@
 package com.forcetech.android;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import android.util.Log;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
 public class ForceTV {
-	private boolean p2pIsStart = false;
+    static {
+        System.loadLibrary("forcetv");
+    }
 
-	public void initForceClient() {
-		try {
-			Process process = Runtime.getRuntime().exec("netstat");
-			BufferedReader bufferedReader = new BufferedReader(
-					new InputStreamReader(process.getInputStream()), 1024);
-			String line = null;
-			while ((line = bufferedReader.readLine()) != null) {
-				if (line.contains("0.0.0.0:9906"))
-					p2pIsStart = true;
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+    private boolean p2pIsStart = false;
 
-		if (!p2pIsStart)
-			Log.d("jni", String.valueOf(start(9906, 20 * 1024 * 1024)));
-	}
-	public native int start(int port, int size);
+    public void initForceClient() {
+        try {
+            Process process = Runtime.getRuntime().exec("netstat");
+            BufferedReader bufferedReader = new BufferedReader(
+                    new InputStreamReader(process.getInputStream()), 1024);
+            String line = null;
+            while ((line = bufferedReader.readLine()) != null) {
+                if (line.contains("0.0.0.0:9906"))
+                    p2pIsStart = true;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
-	public native int stop();
+        if (!p2pIsStart)
+            Log.d("jni", String.valueOf(start(9906, 20 * 1024 * 1024)));
+    }
 
-	static {
-		System.loadLibrary("forcetv");
-	}
+    public native int start(int port, int size);
+
+    public native int stop();
 }

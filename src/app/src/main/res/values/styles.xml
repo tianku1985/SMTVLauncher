@@ -1,13 +1,12 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
-
     <!--
-        Base application theme, dependent on API level. This theme is replaced
-        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    Base application theme, dependent on API level. This theme is replaced
+    by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
 
 
 
 
-    -->
+-->
     <style name="AppBaseTheme" parent="android:Theme.Light">
         <!--
             Theme customizations available in newer API levels can go in
@@ -56,17 +55,18 @@
 
     -->
     <style name="DialogStyle" parent="@android:style/Theme.Dialog">
-        <item name="android:windowBackground"> @android:color/transparent </item>
+        <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:backgroundDimEnabled">true</item>
     </style>
 
     <style name="Dialog_Fullscreen">
-       <item name="android:windowBackground"> @android:color/transparent </item> 
-       <item name="android:windowFullscreen">true</item> 
-       <item name="android:windowNoTitle">true</item>
-       <!-- <item name="android:backgroundDimEnabled">true</item> --><!--昏暗效果-->   
-    </style>  
-    
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        --><!--昏暗效果-->
+    </style>
+
     <style name="bottom_TitleButton">
         <item name="android:textSize">@dimen/sm_24</item>
         <!--
@@ -83,7 +83,7 @@
         <item name="android:windowEnterAnimation">@anim/time_controler_down</item>
         <item name="android:windowExitAnimation">@anim/time_controler_up</item>
     </style>
-    
+
     <style name="AnimationFade">
         <item name="android:windowEnterAnimation">@anim/controler_up</item>
         <item name="android:windowExitAnimation">@anim/controler_down</item>
@@ -117,13 +117,24 @@
         <item name="android:onClick">doClick</item>
     </style>
 
+    <style name="search_keybord_fulls">
+        <item name="android:textSize">@dimen/sm_28</item>
+        <item name="android:textColor">@drawable/menu_textcolor_selector</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/keypad_button_selector</item>
+        <item name="android:layout_width">@dimen/sm_325</item>
+        <item name="android:layout_height">@dimen/sm_60</item>
+        <item name="android:layout_margin">@dimen/sm_3</item>
+        <item name="android:onClick">doClick</item>
+    </style>
+
     <style name="search_keybord_t9">
         <item name="android:layout_width">@dimen/sm_60</item>
         <item name="android:layout_height">@dimen/sm_60</item>
         <item name="android:layout_margin">@dimen/sm_3</item>
         <item name="android:onClick">doClick</item>
     </style>
-    <!-- vod -->
+    <!-- tv -->
 
     <style name="CustomProgressStyle" parent="@android:style/Widget.ProgressBar.Large">
         <item name="android:minWidth">@dimen/sm_120</item>
@@ -132,11 +143,7 @@
         <item name="android:maxHeight">@dimen/sm_120</item>
     </style>
 
-    <style name="anim_appwall">
-        <item name="android:windowEnterAnimation">@anim/setbig</item>
-        <item name="android:windowExitAnimation">@anim/setsmall</item>
-    </style>
-    
+
     <style name="WiFiDialog" parent="android:style/Theme.Dialog">
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:backgroundDimEnabled">true</item>
@@ -145,13 +152,13 @@
         <item name="android:windowFrame">@null</item>
         <item name="android:windowContentOverlay">@null</item>
     </style>
-    
-   <style name="MyCheckBox" parent="@android:style/Widget.CompoundButton.CheckBox">
-	   <item name="android:button">@drawable/check_selector</item>
-   </style>
-   
-   
-       <style name="user_leftbar_full">
+
+    <style name="MyCheckBox" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/check_selector</item>
+    </style>
+
+
+    <style name="user_leftbar_full">
         <item name="android:textSize">@dimen/sm_28</item>
         <item name="android:textColor">@drawable/member_textcolor_selector</item>
         <item name="android:gravity">center</item>
@@ -161,8 +168,98 @@
         <item name="android:layout_height">@dimen/sm_80</item>
         <item name="android:focusable">true</item>
     </style>
+
     <style name="DialogAnim">
         <item name="android:windowEnterAnimation">@anim/dialog_fade_in</item>
         <item name="android:windowExitAnimation">@anim/dialog_fade_out</item>
+    </style>
+
+    <!--电视付款-->
+    <style name="vip_item_root">
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/bg_input2</item>
+        <item name="android:padding">@dimen/sm_3</item>
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/sm_1</item>
+    </style>
+    <style name="vip_item_title">
+        <item name="android:textSize">@dimen/sm_30</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/sm_10</item>
+    </style>
+    <style name="vip_item_price">
+        <item name="android:textSize">@dimen/sm_25</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#ffa000</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/sm_10</item>
+        <item name="android:layout_marginRight">@dimen/sm_100</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+    <style name="vip_item_message">
+        <item name="android:textSize">@dimen/sm_14</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="home_bottom_LinearLayout">
+        <item name="android:gravity">center|left</item>
+        <item name="android:background">@drawable/home_bottom_item_bg</item>
+        <item name="android:paddingLeft">@dimen/sm_50</item>
+        <item name="android:paddingRight">@dimen/sm_25</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/sm_60</item>
+        <item name="android:layout_marginRight">@dimen/sm_25</item>
+    </style>
+    <style name="home_bottom_LinearLayout2">
+        <item name="android:gravity">center|left</item>
+        <item name="android:background">@drawable/home_top_button_bg</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/sm_35</item>
+        <item name="android:layout_marginRight">@dimen/sm_35</item>
+    </style>
+    <style name="home_top_LinearLayout">
+        <item name="android:gravity">center|left</item>
+        <item name="android:background">@drawable/home_top_button_bg</item>
+        <item name="android:paddingLeft">@dimen/sm_25</item>
+        <item name="android:paddingRight">@dimen/sm_25</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/sm_54</item>
+    </style>
+
+    <style name="home_top_LinearLayouts">
+        <item name="android:gravity">center|left</item>
+        <item name="android:background">@drawable/home_top_button_bg</item>
+        <item name="android:paddingLeft">@dimen/sm_25</item>
+        <item name="android:paddingRight">@dimen/sm_25</item>
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/sm_54</item>
+    </style>
+    <style name="home_top_LinearLayouts2">
+        <item name="android:gravity">center|left</item>
+        <item name="android:background">@drawable/home_top_button_bg</item>
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_width">@dimen/sm_35</item>
+        <item name="android:layout_height">@dimen/sm_35</item>
     </style>
 </resources>

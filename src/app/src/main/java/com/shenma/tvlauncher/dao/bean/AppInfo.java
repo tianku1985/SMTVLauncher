@@ -4,76 +4,76 @@ import android.graphics.drawable.Drawable;
 
 public class AppInfo {
 
-	// 应用图标
-	private Drawable appicon;
-	// 应用大小
-	private String appsize;
-	// 安装时间
-	private String appdata;
-	// 应用名称
-	private String appname;
-	//应用包名
-	private String apppack;
-	//是否常用
-	private boolean isLove;
-	
-	public AppInfo(Drawable appicon, String appsize, String appdata, String appname, String apppack) {
-		this.appicon = appicon;
-		this.appsize = appsize;
-		this.appdata = appdata;
-		this.appname = appname;
-		this.apppack = apppack;
-	}
+    // 应用图标
+    private Drawable appicon;
+    // 应用大小
+    private String appsize;
+    // 安装时间
+    private String appdata;
+    // 应用名称
+    private String appname;
+    //应用包名
+    private String apppack;
+    //是否常用
+    private boolean isLove;
 
-	public AppInfo() {
-	}
+    public AppInfo(Drawable appicon, String appsize, String appdata, String appname, String apppack) {
+        this.appicon = appicon;
+        this.appsize = appsize;
+        this.appdata = appdata;
+        this.appname = appname;
+        this.apppack = apppack;
+    }
 
-	public Drawable getAppicon() {
-		return appicon;
-	}
+    public AppInfo() {
+    }
 
-	public void setAppicon(Drawable appicon) {
-		this.appicon = appicon;
-	}
+    public Drawable getAppicon() {
+        return appicon;
+    }
 
-	public String getAppsize() {
-		return appsize;
-	}
+    public void setAppicon(Drawable appicon) {
+        this.appicon = appicon;
+    }
 
-	public void setAppsize(String appsize) {
-		this.appsize = appsize;
-	}
+    public String getAppsize() {
+        return appsize;
+    }
 
-	public String getAppdata() {
-		return appdata;
-	}
+    public void setAppsize(String appsize) {
+        this.appsize = appsize;
+    }
 
-	public void setAppdata(String appdata) {
-		this.appdata = appdata;
-	}
+    public String getAppdata() {
+        return appdata;
+    }
 
-	public String getAppname() {
-		return appname;
-	}
+    public void setAppdata(String appdata) {
+        this.appdata = appdata;
+    }
 
-	public void setAppname(String appname) {
-		this.appname = appname;
-	}
+    public String getAppname() {
+        return appname;
+    }
 
-	public String getApppack() {
-		return apppack;
-	}
+    public void setAppname(String appname) {
+        this.appname = appname;
+    }
 
-	public void setApppack(String apppack) {
-		this.apppack = apppack;
-	}
-	
-	public boolean isLove() {
-		return isLove;
-	}
+    public String getApppack() {
+        return apppack;
+    }
 
-	public void setLove(boolean isLove) {
-		this.isLove = isLove;
-	}
+    public void setApppack(String apppack) {
+        this.apppack = apppack;
+    }
+
+    public boolean isLove() {
+        return isLove;
+    }
+
+    public void setLove(boolean isLove) {
+        this.isLove = isLove;
+    }
 
 }

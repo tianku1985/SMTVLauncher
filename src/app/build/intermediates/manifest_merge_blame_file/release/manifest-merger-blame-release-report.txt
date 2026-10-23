@@ -1,0 +1,391 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="cn.ikumiao.kmtv"
+4    platformBuildVersionCode="23"
+5    platformBuildVersionName="6.0-2704002"
+6    android:versionCode="117"
+7    android:versionName="8.2" >
+8
+9    <uses-sdk
+10        android:minSdkVersion="18"
+10-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml
+11        android:targetSdkVersion="23" />
+11-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml
+12
+13    <supports-screens
+13-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:9:5-14:39
+14        android:anyDensity="true"
+14-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:10:9-34
+15        android:largeScreens="true"
+15-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:11:9-36
+16        android:normalScreens="true"
+16-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:12:9-37
+17        android:resizeable="true"
+17-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:13:9-34
+18        android:smallScreens="true" />
+18-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:14:9-36
+19    <supports-screens
+19-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:9:5-14:39
+20        android:anyDensity="true"
+20-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:10:9-34
+21        android:largeScreens="true"
+21-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:11:9-36
+22        android:normalScreens="true"
+22-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:12:9-37
+23        android:resizeable="true"
+23-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:13:9-34
+24        android:smallScreens="true" />
+24-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:14:9-36
+25
+26    <uses-permission android:name="android.permission.INTERNET" />
+26-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:22:5-67
+26-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:22:22-64
+27    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+27-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:23:5-76
+27-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:23:22-73
+28    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+28-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:24:5-76
+28-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:24:22-73
+29    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+29-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:25:5-79
+29-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:25:22-76
+30    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+30-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:26:5-79
+30-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:26:22-76
+31    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+31-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:27:5-81
+31-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:27:22-78
+32    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+32-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:28:5-75
+32-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:28:22-72
+33    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+33-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:29:5-73
+33-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:29:22-70
+34    <uses-permission android:name="android.permission.WAKE_LOCK" />
+34-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:30:5-68
+34-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:30:22-65
+35    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+35-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:31:5-84
+35-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:31:22-81
+36
+37    <uses-feature
+37-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:33:5-35:35
+38        android:name="android.hardware.type.television"
+38-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:34:9-56
+39        android:required="true" />
+39-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:35:9-32
+40
+41    <application
+41-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:36:5-187:19
+42        android:name="com.shenma.tvlauncher.application.MyApplication"
+42-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:37:9-71
+43        android:allowBackup="true"
+43-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:38:9-35
+44        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
+44-->[com.android.support:support-compat:28.0.0] D:\development\Android\sdk\ndk\caches\transforms-2\files-2.1\f1491a81a65d4033a56d6549564e765e\support-compat-28.0.0\AndroidManifest.xml:22:18-91
+45        android:hardwareAccelerated="true"
+45-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:39:9-43
+46        android:icon="@drawable/icon"
+46-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:40:9-38
+47        android:label="@string/app_name"
+47-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:41:9-41
+48        android:largeHeap="true"
+48-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:42:9-33
+49        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+49-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:43:9-67
+50        <activity
+50-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:44:9-55:20
+51            android:name="com.shenma.tvlauncher.SplashActivity"
+51-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:45:13-64
+52            android:configChanges="keyboardHidden|orientation"
+52-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:46:13-63
+53            android:label="@string/app_name"
+53-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:47:13-45
+54            android:screenOrientation="landscape" >
+54-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:48:13-50
+55            <intent-filter>
+55-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:49:13-54:29
+56                <action android:name="android.intent.action.MAIN" />
+56-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:50:17-69
+56-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:50:25-66
+57
+58                <category android:name="android.intent.category.DEFAULT" />
+58-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:51:17-76
+58-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:51:27-73
+59                <category android:name="android.intent.category.MONKEY" />
+59-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:52:17-75
+59-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:52:27-72
+60                <category android:name="android.intent.category.LAUNCHER" />
+60-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:53:17-77
+60-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:53:27-74
+61            </intent-filter>
+62        </activity>
+63
+64        <!-- 刘海屏适配 -->
+65        <meta-data
+65-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:58:9-76
+66            android:name="android.max_aspect"
+66-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:58:20-53
+67            android:value="2.4" />
+67-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:58:54-73
+68
+69        <activity
+69-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:60:9-64:53
+70            android:name="com.shenma.tvlauncher.HomeActivity"
+70-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:61:13-62
+71            android:configChanges="keyboardHidden|orientation|screenSize"
+71-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:62:13-74
+72            android:launchMode="singleTask"
+72-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:63:13-44
+73            android:screenOrientation="landscape" />
+73-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:64:13-50
+74        <activity
+74-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:65:9-68:53
+75            android:name="com.shenma.tvlauncher.tvback.TVBackActivity"
+75-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:66:13-71
+76            android:configChanges="keyboardHidden|orientation"
+76-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:67:13-63
+77            android:screenOrientation="landscape" />
+77-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:68:13-50
+78        <activity
+78-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:69:9-78:20
+79            android:name="com.shenma.tvlauncher.tvlive.TVLivePlayer"
+79-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:70:13-69
+80            android:configChanges="keyboardHidden|orientation"
+80-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:71:13-63
+81            android:process="com.shenma.tvlive"
+81-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:72:13-48
+82            android:screenOrientation="landscape" >
+82-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:73:13-50
+83            <intent-filter>
+83-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:74:13-77:29
+84                <action android:name="android.intent.action.START.TVLIVE" />
+84-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:75:17-77
+84-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:75:25-74
+85
+86                <category android:name="android.intent.category.DEFAULT" />
+86-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:51:17-76
+86-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:51:27-73
+87            </intent-filter>
+88        </activity>
+89        <activity
+89-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:79:9-82:53
+90            android:name="com.shenma.tvlauncher.BaseActivity"
+90-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:80:13-62
+91            android:configChanges="keyboardHidden|orientation"
+91-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:81:13-63
+92            android:screenOrientation="landscape" />
+92-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:82:13-50
+93        <activity
+93-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:83:9-86:53
+94            android:name="com.shenma.tvlauncher.AboutActivity"
+94-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:84:13-63
+95            android:configChanges="keyboardHidden|orientation"
+95-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:85:13-63
+96            android:screenOrientation="landscape" />
+96-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:86:13-50
+97        <activity
+97-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:87:9-90:53
+98            android:name="com.shenma.tvlauncher.SettingPlayActivity"
+98-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:88:13-69
+99            android:configChanges="keyboardHidden|orientation"
+99-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:89:13-63
+100            android:screenOrientation="landscape" />
+100-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:90:13-50
+101        <activity
+101-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:91:9-94:53
+102            android:name="com.shenma.tvlauncher.vod.VodTypeActivity"
+102-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:92:13-69
+103            android:configChanges="keyboardHidden|orientation"
+103-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:93:13-63
+104            android:screenOrientation="landscape" />
+104-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:94:13-50
+105        <activity
+105-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:95:9-98:53
+106            android:name="com.shenma.tvlauncher.vod.VodDetailsActivity"
+106-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:96:13-72
+107            android:configChanges="keyboardHidden|orientation"
+107-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:97:13-63
+108            android:screenOrientation="landscape" />
+108-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:98:13-50
+109        <activity
+109-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:99:9-102:53
+110            android:name="com.shenma.tvlauncher.vod.VideoPlayerActivity"
+110-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:100:13-73
+111            android:configChanges="keyboardHidden|orientation"
+111-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:101:13-63
+112            android:screenOrientation="landscape" />
+112-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:102:13-50
+113        <activity
+113-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:103:9-106:53
+114            android:name="com.shenma.tvlauncher.vod.LivePlayerActivity"
+114-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:104:13-72
+115            android:configChanges="keyboardHidden|orientation"
+115-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:105:13-63
+116            android:screenOrientation="landscape" />
+116-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:106:13-50
+117        <activity
+117-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:107:9-110:53
+118            android:name="com.shenma.tvlauncher.vod.SearchActivity"
+118-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:108:13-68
+119            android:configChanges="keyboardHidden|orientation"
+119-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:109:13-63
+120            android:screenOrientation="landscape" />
+120-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:110:13-50
+121        <activity
+121-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:111:9-114:53
+122            android:name="com.shenma.tvlauncher.ClearActivity"
+122-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:112:13-63
+123            android:configChanges="keyboardHidden|orientation"
+123-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:113:13-63
+124            android:screenOrientation="landscape" />
+124-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:114:13-50
+125        <activity
+125-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:115:9-118:53
+126            android:name="com.shenma.tvlauncher.OtherActivity"
+126-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:116:13-63
+127            android:configChanges="keyboardHidden|orientation"
+127-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:117:13-63
+128            android:screenOrientation="landscape" />
+128-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:118:13-50
+129        <activity
+129-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:119:9-122:53
+130            android:name="com.shenma.tvlauncher.TvStationActivity"
+130-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:120:13-67
+131            android:configChanges="keyboardHidden|orientation"
+131-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:121:13-63
+132            android:screenOrientation="landscape" />
+132-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:122:13-50
+133        <activity
+133-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:123:9-126:53
+134            android:name="com.shenma.tvlauncher.UserActivity"
+134-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:124:13-62
+135            android:configChanges="keyboardHidden|orientation"
+135-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:125:13-63
+136            android:screenOrientation="landscape" />
+136-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:126:13-50
+137        <activity
+137-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:127:9-130:53
+138            android:name="com.shenma.tvlauncher.SettingRemoteActivity"
+138-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:128:13-71
+139            android:configChanges="keyboardHidden|orientation"
+139-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:129:13-63
+140            android:screenOrientation="landscape" />
+140-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:130:13-50
+141        <activity
+141-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:131:9-135:53
+142            android:name="com.shenma.tvlauncher.AppManageActivity"
+142-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:132:13-67
+143            android:configChanges="keyboardHidden|orientation"
+143-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:133:13-63
+144            android:launchMode="singleInstance"
+144-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:134:13-48
+145            android:screenOrientation="landscape" />
+145-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:135:13-50
+146        <activity
+146-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:136:9-139:53
+147            android:name="com.shenma.tvlauncher.SettingActActvity"
+147-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:137:13-67
+148            android:configChanges="keyboardHidden|orientation"
+148-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:138:13-63
+149            android:screenOrientation="landscape" />
+149-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:139:13-50
+150        <activity
+150-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:140:9-143:53
+151            android:name="com.shenma.tvlauncher.SettingWallpaperActivity"
+151-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:141:13-74
+152            android:configChanges="keyboardHidden|orientation"
+152-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:142:13-63
+153            android:screenOrientation="landscape" />
+153-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:143:13-50
+154        <activity
+154-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:144:9-147:53
+155            android:name="com.shenma.tvlauncher.TopicActivity"
+155-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:145:13-63
+156            android:configChanges="keyboardHidden|orientation"
+156-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:146:13-63
+157            android:screenOrientation="landscape" />
+157-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:147:13-50
+158        <activity
+158-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:148:9-151:53
+159            android:name="com.shenma.tvlauncher.EmpowerActivity"
+159-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:149:13-65
+160            android:configChanges="keyboardHidden|orientation"
+160-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:150:13-63
+161            android:screenOrientation="landscape" />
+161-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:151:13-50
+162        <activity
+162-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:152:9-155:53
+163            android:name="com.shenma.tvlauncher.HistoryActivity"
+163-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:153:13-65
+164            android:configChanges="keyboardHidden|orientation"
+164-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:154:13-63
+165            android:screenOrientation="landscape" />
+165-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:155:13-50
+166        <activity
+166-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:156:9-159:53
+167            android:name="com.shenma.tvlauncher.SettingInvActivity"
+167-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:157:13-68
+168            android:configChanges="keyboardHidden|orientation"
+168-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:158:13-63
+169            android:screenOrientation="landscape" />
+169-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:159:13-50
+170
+171        <service
+171-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:160:9-163:67
+172            android:name="com.shenma.tvlauncher.view.MyServices"
+172-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:163:13-65
+173            android:enabled="true"
+173-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:161:13-35
+174            android:exported="false" />
+174-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:162:13-37
+175        <service
+175-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:164:9-167:66
+176            android:name="com.shenma.tvlauncher.view.MyService"
+176-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:167:13-64
+177            android:enabled="true"
+177-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:165:13-35
+178            android:exported="false" />
+178-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:166:13-37
+179        <service
+179-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:168:9-171:69
+180            android:name="com.shenma.tvlauncher.view.JSONService"
+180-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:171:13-66
+181            android:enabled="true"
+181-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:169:13-35
+182            android:exported="false" />
+182-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:170:13-37
+183
+184        <meta-data
+184-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:172:9-174:32
+185            android:name="UMENG_APPKEY"
+185-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:173:13-40
+186            android:value="" />
+186-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:174:13-29
+187        <meta-data
+187-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:175:9-177:36
+188            android:name="UMENG_CHANNEL"
+188-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:176:13-41
+189            android:value="smtv" />
+189-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:177:13-33
+190        <meta-data
+190-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:178:9-180:50
+191            android:name="UMENG_KEY"
+191-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:179:13-37
+192            android:value="1621e18154b078e16c" />
+192-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:180:13-47
+193        <meta-data
+193-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:181:9-183:36
+194            android:name="TALKINGDATA_CHANNEL"
+194-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:182:13-47
+195            android:value="king" />
+195-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:183:13-33
+196        <meta-data
+196-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:184:9-186:54
+197            android:name="TALKINGDATA_VALUE"
+197-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:185:13-45
+198            android:value="5465e78553b07de76f2b59" />
+198-->E:\KUMIAOTV1\SMTVCESHI\app\src\main\AndroidManifest.xml:186:13-51
+199    </application>
+200
+201</manifest>

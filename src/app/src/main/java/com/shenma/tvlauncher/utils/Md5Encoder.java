@@ -1,5 +1,7 @@
 package com.shenma.tvlauncher.utils;
 
+import org.apache.http.conn.util.InetAddressUtils;
+
 import java.net.InetAddress;
 import java.net.NetworkInterface;
 import java.net.SocketException;
@@ -7,14 +9,41 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Enumeration;
 
-import org.apache.http.conn.util.InetAddressUtils;
-
-import com.shenma.tvlauncher.tvlive.network.LiveConstant;
-
-
+/**
+ * @author joychang
+ * @Description MD5加密
+ */
 public class Md5Encoder {
-	
-	public static String getIP() {
+    public static String encode(String pwd) {
+        try {
+            MessageDigest digest = MessageDigest.getInstance("MD5");
+            byte[] bytes = digest.digest(pwd.getBytes());
+            StringBuffer sb = new StringBuffer();
+            for (int i = 0; i < bytes.length; i++) {
+                String s = Integer.toHexString(0xff & bytes[i]);
+
+                if (s.length() == 1) {
+                    sb.append("0" + s);
+                } else {
+                    sb.append(s);
+                }
+            }
+
+            return sb.toString();
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+            throw new RuntimeException("buhuifasheng");
+        }
+    }
+
+
+    public static String getEncode2Key(String string) {
+        string = new StringBuilder(String.valueOf(Integer.parseInt(string) + 9000)).toString();
+        Logger.i("joychang", "key1=" + "hdplive" + "---key2=" + string + "---key3=" + "6r7b4e7d8bktfu8e" + "---key4=" + getIP());
+        return String.valueOf(string) + "_" + encode(String.valueOf("hdplive") + "," + string + "," + "6r7b4e7d8bktfu8e" + "," + "119.255.53.130");
+    }
+
+    public static String getIP() {
         try {
             Enumeration<NetworkInterface> en = NetworkInterface.getNetworkInterfaces();
             // 遍历所用的网络接口
@@ -34,41 +63,6 @@ public class Md5Encoder {
         }
         return "";
     }
-
-	public static String encode(String password){
-		try {
-			if(null==password||"null".equals(password)){
-				password = "wephd_live_new";
-			}
-			MessageDigest digest = MessageDigest.getInstance("MD5");
-			byte[] result = digest.digest(password.getBytes());
-			StringBuilder sb = new StringBuilder();
-			for(int i= 0 ;i<result.length;i++){
-				int number = result[i]&0xff;//
-				String str = Integer.toHexString(number);
-				if(str.length()==1){
-					sb.append("0");
-					sb.append(str);
-				}else{
-					sb.append(str);
-				}
-			}
-			return sb.toString();
-		} catch (NoSuchAlgorithmException e) {
-			e.printStackTrace();
-			//CNA'T REACH;
-			return "";
-		}
-	}
-	
-	public static String getEncode2Key(String key2){
-		String ret = "";
-		key2 = Integer.parseInt(key2)+9000+""; 
-		String key1 = LiveConstant.LIVE_KEY1;
-		String key3 = LiveConstant.LIVE_KEY3;
-		String key4 = getIP();
-		Logger.i("joychang", "key1="+key1+"---key2="+key2+"---key3="+key3+"---key4="+key4);
-		ret = key2+"_"+encode(key1+","+key2+","+key3+","+"119.255.53.130");
-		return ret;
-	}
 }
+
+

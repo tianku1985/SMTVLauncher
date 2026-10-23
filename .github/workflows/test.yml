@@ -1,0 +1,134 @@
+name: Build Android APK
+
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+    branches: [master, main]
+  workflow_dispatch:
+    inputs:
+      donotpublish:
+        description: '构建后不发布 Release'
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: src
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # Gradle 5.1.1 / AGP 3.4.1 需要 JDK 8，但新版 Android cmdline-tools 的
+      # sdkmanager 需要 JDK 17，因此先用 17 安装 SDK，再切回 8 执行构建。
+      - name: Set up JDK 17 (Android SDK tools)
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Install Android SDK packages
+        run: |
+          set -e
+          SDK="${ANDROID_SDK_ROOT:-${ANDROID_HOME:-/usr/local/lib/android/sdk}}"
+          SDKMANAGER="$SDK/cmdline-tools/latest/bin/sdkmanager"
+          if [ ! -x "$SDKMANAGER" ]; then
+            SDKMANAGER="$(command -v sdkmanager)"
+          fi
+          yes | "$SDKMANAGER" --licenses >/dev/null 2>&1 || true
+          "$SDKMANAGER" \
+            "platform-tools" \
+            "platforms;android-30" \
+            "build-tools;28.0.3"
+          echo "ANDROID_SDK_ROOT=$SDK" >> "$GITHUB_ENV"
+          echo "ANDROID_HOME=$SDK" >> "$GITHUB_ENV"
+          # 仓库里的 local.properties 是本机 Windows 路径，覆盖为 runner 上的 SDK 路径
+          echo "sdk.dir=$SDK" > local.properties
+
+      - name: Set up JDK 8
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '8'
+
+      - name: Cache Gradle
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: gradle-${{ runner.os }}-${{ hashFiles('src/**/*.gradle', 'src/gradle/wrapper/gradle-wrapper.properties') }}
+          restore-keys: |
+            gradle-${{ runner.os }}-
+
+      - name: Build release APK
+        env:
+          GRADLE_OPTS: '-Xmx4g -Dorg.gradle.jvmargs=-Xmx4g'
+        run: |
+          set -e
+          chmod +x gradlew
+          ./gradlew --no-daemon --stacktrace assembleRelease
+
+      - name: Sign APK
+        env:
+          KEYSTORE_FILE: shenmatv.jks
+          KEYSTORE_PASSWORD: uw3GlHbAkA9V
+          KEY_ALIAS: key0
+          KEY_PASSWORD: iRG81BV3jS1h
+        run: |
+          set -e
+          APK="$(find app/build/outputs/apk/release -maxdepth 1 -name '*.apk' ! -name '*-unsigned*' | head -n 1)"
+          if [ -z "$APK" ]; then
+            APK="$(find app/build/outputs/apk/release -maxdepth 1 -name '*.apk' | head -n 1)"
+          fi
+          if [ -z "$APK" ]; then
+            echo "未找到 release APK"
+            find app/build/outputs -name '*.apk' -print || true
+            exit 1
+          fi
+
+          VERSION="$(date +%Y%m%d)-${GITHUB_RUN_NUMBER}"
+          BT="$ANDROID_SDK_ROOT/build-tools/28.0.3"
+          mkdir -p ../dist
+          "$BT/zipalign" -f -p 4 "$APK" ../dist/aligned.apk
+          "$BT/apksigner" sign \
+            --ks "$KEYSTORE_FILE" \
+            --ks-key-alias "$KEY_ALIAS" \
+            --ks-pass "pass:$KEYSTORE_PASSWORD" \
+            --key-pass "pass:$KEY_PASSWORD" \
+            --out "../dist/SMTVLauncher-${VERSION}.apk" \
+            ../dist/aligned.apk
+          "$BT/apksigner" verify --verbose "../dist/SMTVLauncher-${VERSION}.apk"
+          cp -f "../dist/SMTVLauncher-${VERSION}.apk" ../dist/SMTVLauncher-latest.apk
+          echo "VERSION=$VERSION" >> "$GITHUB_ENV"
+
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: SMTVLauncher-${{ env.VERSION }}
+          path: dist/*.apk
+          if-no-files-found: error
+
+      - name: Publish latest release
+        if: ${{ github.event_name != 'pull_request' && inputs.donotpublish != true }}
+        uses: ncipollo/release-action@v1
+        with:
+          name: SMTVLauncher-latest
+          tag: SMTVLauncher-latest
+          allowUpdates: true
+          removeArtifacts: true
+          artifacts: dist/*.apk

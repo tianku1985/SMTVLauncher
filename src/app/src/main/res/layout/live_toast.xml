@@ -5,10 +5,10 @@
     android:layout_height="wrap_content"
     android:background="@drawable/smtv_toast_bg"
     android:orientation="horizontal"
-    android:paddingBottom="@dimen/sm_5"
     android:paddingLeft="@dimen/sm_20"
+    android:paddingTop="@dimen/sm_5"
     android:paddingRight="@dimen/sm_20"
-    android:paddingTop="@dimen/sm_5" >
+    android:paddingBottom="@dimen/sm_5">
 
     <TextView
         android:id="@+id/tv_live_toast"

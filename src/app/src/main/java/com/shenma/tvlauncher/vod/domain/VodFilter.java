@@ -2,112 +2,122 @@ package com.shenma.tvlauncher.vod.domain;
 
 import java.io.Serializable;
 import java.util.List;
-/**
- * 筛选类型
- * @author joychang
- *
- */
-public class VodFilter implements Serializable{
-
-	public String status;
-	public List<Category> data;
-
-	public Category getCategoryById(int listid){
-		for(Category category:data){
-			if (category.list_id.equals(String.valueOf(listid)))
-				return category;
-		}
-		return null;
-	}
 
 
-	private List<VodFilterInfo> tvplay;
-	private List<VodFilterInfo> comic;
-	private List<VodFilterInfo> tvshow;
-	private List<VodFilterInfo> documentary;
-	private List<VodFilterInfo> teach;
-	private List<VodFilterInfo> movie;
-	/**
-	 * @return the tvplay
-	 */
-	public List<VodFilterInfo> getTvplay() {
-		return tvplay;
-	}
-	/**
-	 * @param tvplay the tvplay to set
-	 */
-	public void setTvplay(List<VodFilterInfo> tvplay) {
-		this.tvplay = tvplay;
-	}
-	/**
-	 * @return the comic
-	 */
-	public List<VodFilterInfo> getComic() {
-		return comic;
-	}
-	/**
-	 * @param comic the comic to set
-	 */
-	public void setComic(List<VodFilterInfo> comic) {
-		this.comic = comic;
-	}
-	/**
-	 * @return the tvshow
-	 */
-	public List<VodFilterInfo> getTvshow() {
-		return tvshow;
-	}
-	/**
-	 * @param tvshow the tvshow to set
-	 */
-	public void setTvshow(List<VodFilterInfo> tvshow) {
-		this.tvshow = tvshow;
-	}
-	/**
-	 * @return the documentary
-	 */
-	public List<VodFilterInfo> getDocumentary() {
-		return documentary;
-	}
-	/**
-	 * @param documentary the documentary to set
-	 */
-	public void setDocumentary(List<VodFilterInfo> documentary) {
-		this.documentary = documentary;
-	}
-	/**
-	 * @return the teach
-	 */
-	public List<VodFilterInfo> getTeach() {
-		return teach;
-	}
-	/**
-	 * @param teach the teach to set
-	 */
-	public void setTeach(List<VodFilterInfo> teach) {
-		this.teach = teach;
-	}
-	/**
-	 * @return the movie
-	 */
-	public List<VodFilterInfo> getMovie() {
-		return movie;
-	}
-	/**
-	 * @param movie the movie to set
-	 */
-	public void setMovie(List<VodFilterInfo> movie) {
-		this.movie = movie;
-	}
-	/* (non-Javadoc)
-	 * @see java.lang.Object#toString()
-	 */
-	@Override
-	public String toString() {
-		return "VodFilter [tvplay=" + tvplay + ", comic=" + comic + ", tvshow="
-				+ tvshow + ", documentary=" + documentary + ", teach=" + teach
-				+ ", movie=" + movie + "]";
-	}
-	
+public class VodFilter implements Serializable {
+    private List<VodFilterInfo> flitter;
+
+    public List<VodFilterInfo> getFlitter() {
+        return this.flitter;
+    }
+
+    public String toString() {
+        return "VodFilter [flitter=" + this.flitter
+                + "]";
+    }
 }
 
+
+/*public class VodFilter implements Serializable {
+    private List<VodFilterInfo> tvplay;
+    private List<VodFilterInfo> movie;
+    private List<VodFilterInfo> tvshow;
+    private List<VodFilterInfo> comic;
+    private List<VodFilterInfo> hanguoju;
+    private List<VodFilterInfo> oumeiju;
+    private List<VodFilterInfo> movie_4k;
+    private List<VodFilterInfo> movie_zb;
+    private List<VodFilterInfo> flitter;
+
+
+
+
+    public List<VodFilterInfo> getFlitter() {
+        return this.flitter;
+    }
+
+    public void setFlitter(List<VodFilterInfo> flitter) {
+        this.flitter = flitter;
+    }
+
+    public List<VodFilterInfo> getTvplay() {
+        return this.tvplay;
+    }
+
+    public void setTvplay(List<VodFilterInfo> tvplay) {
+        this.tvplay = tvplay;
+    }
+
+    public List<VodFilterInfo> getMovie() {
+        return this.movie;
+    }
+
+    public void setMovie(List<VodFilterInfo> movie) {
+        this.movie = movie;
+    }
+
+    public List<VodFilterInfo> getTvshow() {
+        return this.tvshow;
+    }
+
+    public void setTvshow(List<VodFilterInfo> tvshow) {
+        this.tvshow = tvshow;
+    }
+
+    public List<VodFilterInfo> getComic() {
+        return this.comic;
+    }
+
+    public void setComic(List<VodFilterInfo> comic) {
+        this.comic = comic;
+    }
+
+    public List<VodFilterInfo> getOumeiju()
+    {
+        return this.oumeiju;
+    }
+
+    public void setoumeiju(List<VodFilterInfo> oumeiju) {
+        this.oumeiju = oumeiju;
+    }
+
+    public List<VodFilterInfo> getHanguoju()
+    {
+        return this.hanguoju;
+    }
+
+    public void setHanguoju(List<VodFilterInfo> hanguoju) {
+        this.hanguoju = hanguoju;
+    }
+
+    public List<VodFilterInfo> getMovie_4k() {
+        return this.movie_4k;
+    }
+
+    public void setMovie_4k(List<VodFilterInfo> movie_4k) {
+        this.movie_4k = movie_4k;
+    }
+
+    public List<VodFilterInfo> getMovie_zb() {
+        return this.movie_zb;
+    }
+
+    public void setMovie_ZB(List<VodFilterInfo> movie_zb) {
+        this.movie_zb = movie_zb;
+    }
+
+    public String toString() {
+        return "VodFilter [tvplay=" + this.tvplay
+                + ", movie=" + this.movie
+                + ", tvshow=" + this.tvshow
+                + ", comic=" + this.comic
+                + ", hanguoju=" + this.hanguoju
+                + ", oumeiju=" + this.oumeiju
+                + ", movie_4k=" + this.movie_4k
+                + ", movie_zb=" + this.movie_zb
+                + ", flitter=" + this.flitter
+                + "]";
+    }
+
+}
+*/

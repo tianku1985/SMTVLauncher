@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:paddingLeft="@dimen/sm_15"
-    android:paddingRight="@dimen/sm_15" >
+    android:paddingRight="@dimen/sm_15">
 
     <TextView
         android:id="@+id/wifi_item_ssid_tv"
@@ -21,7 +21,7 @@
         android:layout_width="@dimen/sm_400"
         android:layout_height="@dimen/sm_45"
         android:layout_marginLeft="@dimen/sm_10"
-        android:layout_toRightOf="@id/wifi_item_ssid_tv"
+        android:layout_toRightOf="@+id/wifi_item_ssid_tv"
         android:ellipsize="marquee"
         android:gravity="center_vertical"
         android:singleLine="true"
@@ -36,5 +36,4 @@
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
         android:src="@drawable/wifi_signal_o_0" />
-
 </RelativeLayout>

@@ -1,15 +1,7 @@
 package com.shenma.tvlauncher.vod.adapter;
 
-import java.util.ArrayList;
-import java.util.List;
-import com.nostra13.universalimageloader.core.DisplayImageOptions;
-import com.nostra13.universalimageloader.core.ImageLoader;
-import com.nostra13.universalimageloader.core.assist.ImageScaleType;
-import com.nostra13.universalimageloader.core.display.FadeInBitmapDisplayer;
-import com.shenma.tvlauncher.R;
-import com.shenma.tvlauncher.vod.domain.VodDataInfo;
 import android.content.Context;
-import android.graphics.Bitmap;
+import android.graphics.Bitmap.Config;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,93 +9,92 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-/***
- * 影视类型适配器
- * 
- * @author joychang
- * 
- */
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.DisplayImageOptions.Builder;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.assist.ImageScaleType;
+import com.nostra13.universalimageloader.core.display.FadeInBitmapDisplayer;
+import com.shenma.tvlauncher.R;
+import com.shenma.tvlauncher.vod.domain.VodDataInfo;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import tv.danmaku.ijk.media.player.IjkMediaCodecInfo;
+
 public class SearchTypeAdapter extends BaseAdapter {
-	public static List<VodDataInfo> vodDatas;
-	private LayoutInflater mInflater;
-	private ImageLoader imageLoader;
-	private Context context;
-	private ViewHolder holder;
-	private DisplayImageOptions options;
+    public static List<VodDataInfo> vodDatas;
+    private Context context;
+    private ViewHolder holder;
+    private ImageLoader imageLoader;
+    private LayoutInflater mInflater;
+    private DisplayImageOptions options = new Builder().showStubImage(R.drawable.default_film_img).showImageForEmptyUri(R.drawable.default_film_img).showImageOnFail(R.drawable.default_film_img).resetViewBeforeLoading(true).cacheInMemory(true).cacheOnDisc(true).imageScaleType(ImageScaleType.EXACTLY).bitmapConfig(Config.RGB_565).displayer(new FadeInBitmapDisplayer(IjkMediaCodecInfo.RANK_SECURE)).build();
 
-	public SearchTypeAdapter(Context context,ArrayList<VodDataInfo> datas,ImageLoader imageLoader) {
-		this.context = context;
-		this.vodDatas = datas;
-		this.imageLoader = imageLoader;
-		mInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-		options = new DisplayImageOptions.Builder()
-		.showStubImage(R.drawable.default_film_img)//默认图片
-		.showImageForEmptyUri(R.drawable.default_film_img)
-		.showImageOnFail(R.drawable.default_film_img)
-		.resetViewBeforeLoading(true)
-		.cacheInMemory(true)
-		.cacheOnDisc(true)
-		.imageScaleType(ImageScaleType.EXACTLY)
-		.bitmapConfig(Bitmap.Config.RGB_565)
-		.displayer(new FadeInBitmapDisplayer(300))
-		.build();
-	}
-	
-	public void changData(ArrayList<VodDataInfo> paramArrayList) {
-		setVideos(paramArrayList);
-		notifyDataSetChanged();
-	}
+    public SearchTypeAdapter(Context context, ArrayList<VodDataInfo> datas, ImageLoader imageLoader) {
+        this.context = context;
+        vodDatas = datas;
+        this.imageLoader = imageLoader;
+        this.mInflater = (LayoutInflater) context.getSystemService("layout_inflater");
+    }
 
-	private void setVideos(ArrayList<VodDataInfo> paramArrayList) {
-		if (paramArrayList != null) {
-			this.vodDatas = paramArrayList;
-			return;
-		}
-		ArrayList<VodDataInfo> localArrayList = new ArrayList<VodDataInfo>();
-		this.vodDatas = localArrayList;		
-	}
+    public void changData(ArrayList<VodDataInfo> paramArrayList) {
+        setVideos(paramArrayList);
+        notifyDataSetChanged();
+    }
 
-	@Override
-	public View getView(int position, View convertView, ViewGroup parent) {
-		if (convertView == null) {
-			convertView = mInflater.inflate(R.layout.mv_type_details_item, null);
-			holder = new ViewHolder();
-			holder.poster = (ImageView) convertView
-					.findViewById(R.id.video_poster);
-			holder.state = (TextView) convertView
-					.findViewById(R.id.video_state);
-			holder.videoName = (TextView) convertView
-					.findViewById(R.id.video_name);
-			convertView.setTag(holder);
-		}else{
-			holder = (ViewHolder) convertView.getTag();
-		}
-		VodDataInfo vd = vodDatas.get(position);
-		imageLoader.displayImage(vd.getPic(), holder.poster, options);
-		holder.videoName.setText(vd.getTitle());
-		holder.state.setText(vd.getState());
-		return convertView;
-	}
+    private void setVideos(ArrayList<VodDataInfo> paramArrayList) {
+        if (paramArrayList != null) {
+            vodDatas = paramArrayList;
+        } else {
+            vodDatas = new ArrayList();
+        }
+    }
 
-	@Override
-	public int getCount() {
-		return vodDatas.size();
-	}
+    public View getView(int position, View convertView, ViewGroup parent) {
+        if (convertView == null) {
+            convertView = this.mInflater.inflate(R.layout.mv_type_details_item, null);
+            this.holder = new ViewHolder();
+            this.holder.poster = (ImageView) convertView.findViewById(R.id.video_poster);
+            this.holder.state = (TextView) convertView.findViewById(R.id.video_state);
+            this.holder.score = (TextView) convertView.findViewById(R.id.video_item_Score);
+            this.holder.videoName = (TextView) convertView.findViewById(R.id.video_name);
+            convertView.setTag(this.holder);
+        } else {
+            this.holder = (ViewHolder) convertView.getTag();
+        }
+        VodDataInfo vd = (VodDataInfo) vodDatas.get(position);
+        this.imageLoader.displayImage(vd.getPic(), this.holder.poster, this.options);
+        this.holder.videoName.setText(vd.getTitle());
+        this.holder.state.setText(vd.getState());
+        if (vd.getScore() != null && vd.getScore() != ""){
+            this.holder.score.setVisibility(View.VISIBLE);
+            this.holder.score.setText(vd.getScore());
+        }else{
+            this.holder.score.setVisibility(View.GONE);
+        }
+        return convertView;
+    }
 
-	@Override
-	public Object getItem(int position) {
-		return vodDatas.get(position);
-	}
+    public int getCount() {
+        return vodDatas.size();
+    }
 
-	@Override
-	public long getItemId(int position) {
-		return position;
-	}
+    public Object getItem(int position) {
+        return vodDatas.get(position);
+    }
 
-	class ViewHolder {
-		private TextView state;
-		private ImageView poster;
-		private ImageView spuerHd;
-		private TextView videoName;
-	}
+    public long getItemId(int position) {
+        return (long) position;
+    }
+
+    class ViewHolder {
+        private ImageView poster;
+        private ImageView spuerHd;
+        private TextView state;
+        private TextView score;
+        private TextView videoName;
+
+        ViewHolder() {
+        }
+    }
 }

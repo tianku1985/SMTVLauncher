@@ -1,12 +1,12 @@
 package com.shenma.tvlauncher.vod.domain;
 
-import java.util.HashMap;
-
 import android.content.Context;
 
+import java.util.HashMap;
+
 public class RequestVo {
-	public String requestUrl;
-	public Context context;
-	public HashMap<String,String> requestDataMap;
-	public String type;
+    public Context context;
+    public HashMap<String, String> requestDataMap;
+    public String requestUrl;
+    public String type;
 }

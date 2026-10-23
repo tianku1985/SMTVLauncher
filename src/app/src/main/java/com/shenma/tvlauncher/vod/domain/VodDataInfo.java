@@ -1,31 +1,18 @@
 package com.shenma.tvlauncher.vod.domain;
 
-import com.google.gson.annotations.SerializedName;
-import com.shenma.tvlauncher.utils.Constant;
-
 public class VodDataInfo {
-
-    @SerializedName("vod_id")
-    private long id;
-    @SerializedName("vod_name")
-    private String title;//节目名称
-    @SerializedName("vod_url")
-    private String nextlink;//节目详细地址
-    @SerializedName("vod_pic")
-    private String pic;//节目图片地址
-    @SerializedName("vod_state")
-    private String state;//节目状态
-
-    public long getId() {
-        return id;
-    }
-
-    @SerializedName("list_name")
-
+    private String nextlink;
+    private String pic;
+    private String state;
+    private String title;
     private String type;
+    private String score;
+    private String blurb;
+    private String pic_slide;
+
 
     public String getTitle() {
-        return title;
+        return this.title;
     }
 
     public void setTitle(String title) {
@@ -33,7 +20,7 @@ public class VodDataInfo {
     }
 
     public String getNextlink() {
-        return nextlink;
+        return this.nextlink;
     }
 
     public void setNextlink(String nextlink) {
@@ -41,41 +28,53 @@ public class VodDataInfo {
     }
 
     public String getPic() {
-        if(pic.startsWith("http://img.maccms.com/pic.php")){
-            return pic.replace("http://img.maccms.com/pic.php",Constant.BASE_URL +"/pic.php");
-        }
-        else if (pic.startsWith("http")) {
-            return pic;
-        } else {
-            return Constant.BASE_URL + pic;
-        }
+        return this.pic;
     }
 
     public void setPic(String pic) {
         this.pic = pic;
     }
 
+    public String getBlurb() {
+        return this.blurb;
+    }
+
+    public String getPic_slide() {
+        return this.pic_slide;
+    }
+
     public String getState() {
-        return state;
+        return this.state;
     }
 
     public void setState(String state) {
         this.state = state;
     }
 
+    public String getScore() {
+        return this.score;
+    }
+
+    public void setScore(String score) {
+        this.score = score;
+    }
+
     public String getType() {
-        return type;
+        return this.type;
     }
 
     public void setType(String type) {
         this.type = type;
     }
 
-    @Override
     public String toString() {
-        return "VodDataInfo [title=" + title + ", nextlink=" + nextlink
-                + ", pic=" + pic + ", state=" + state + ", type=" + type
-                + "]";
+        return "VodDataInfo [title=" + this.title
+                + ", nextlink=" + this.nextlink
+                + ", pic=" + this.pic
+                + ", blurb=" + this.blurb
+                + ", pic_slide=" + this.pic_slide
+                + ", state=" + this.state
+                + ", type=" + this.type
+                + ", score=" + this.score + "]";
     }
-
 }

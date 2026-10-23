@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <dimen name="sm_16">12.5px</dimen>
     <dimen name="sm_415">324.21875px</dimen>
     <dimen name="sm_13">10.15625px</dimen>
@@ -230,43 +229,39 @@
     <dimen name="sm_195">152.34375px</dimen>
     <dimen name="sm_246">192.1875px</dimen>
     <dimen name="sm_241">188.28125px</dimen>
-<dimen name="sm_210">164.0625px</dimen>
-<dimen name="sm_719">561.71875px</dimen>
-<dimen name="sm_892">696.875px</dimen>
-
-
-<dimen name="sm_258">201.5625px</dimen>
-<dimen name="sm_396">309.375px</dimen>
-<dimen name="sm_261">203.90625px</dimen>
-<dimen name="sm_309">241.40625px</dimen>
-<dimen name="sm_251">196.09375px</dimen>
-<dimen name="sm_252">196.875px</dimen>
-<dimen name="sm_197">153.90625px</dimen>
-<dimen name="sm_147">114.84375px</dimen>
-<dimen name="sm_680">531.25px</dimen>
-<dimen name="sm_943">736.71875px</dimen>
-<dimen name="sm_201">157.03125px</dimen>
-<dimen name="sm_373">291.40625px</dimen>
-<dimen name="sm_546">426.5625px</dimen>
-<dimen name="sm_348">271.875px</dimen>
-<dimen name="sm_19">14.84375px</dimen>
-<dimen name="sm_213">166.40625px</dimen>
-<dimen name="sm_306">239.0625px</dimen>
-<dimen name="sm_492">384.375px</dimen>
-<dimen name="sm_566">442.1875px</dimen>
-<dimen name="sm_763">596.09375px</dimen>
-<dimen name="sm_294">229.6875px</dimen>
-<dimen name="sm_172">134.375px</dimen>
-<dimen name="sm_259">202.34375px</dimen>
-<dimen name="sm_51">39.84375px</dimen>
-<dimen name="sm_41">32.03125px</dimen>
-<dimen name="sm_398">310.9375px</dimen>
-<dimen name="sm_361">282.03125px</dimen>
-<dimen name="sm_498">389.0625px</dimen>
-<dimen name="sm_459">358.59375px</dimen>
-
-<dimen name="sm_746">582.8125px</dimen>
-<dimen name="sm_390">304.6875px</dimen>
-<dimen name="sm_199">155.46875px</dimen>
-
+    <dimen name="sm_210">164.0625px</dimen>
+    <dimen name="sm_719">561.71875px</dimen>
+    <dimen name="sm_892">696.875px</dimen>
+    <dimen name="sm_258">201.5625px</dimen>
+    <dimen name="sm_396">309.375px</dimen>
+    <dimen name="sm_261">203.90625px</dimen>
+    <dimen name="sm_309">241.40625px</dimen>
+    <dimen name="sm_251">196.09375px</dimen>
+    <dimen name="sm_252">196.875px</dimen>
+    <dimen name="sm_197">153.90625px</dimen>
+    <dimen name="sm_147">114.84375px</dimen>
+    <dimen name="sm_680">531.25px</dimen>
+    <dimen name="sm_943">736.71875px</dimen>
+    <dimen name="sm_201">157.03125px</dimen>
+    <dimen name="sm_373">291.40625px</dimen>
+    <dimen name="sm_546">426.5625px</dimen>
+    <dimen name="sm_348">271.875px</dimen>
+    <dimen name="sm_19">14.84375px</dimen>
+    <dimen name="sm_213">166.40625px</dimen>
+    <dimen name="sm_306">239.0625px</dimen>
+    <dimen name="sm_492">384.375px</dimen>
+    <dimen name="sm_566">442.1875px</dimen>
+    <dimen name="sm_763">596.09375px</dimen>
+    <dimen name="sm_294">229.6875px</dimen>
+    <dimen name="sm_361">282.03125px</dimen>
+    <dimen name="sm_498">389.0625px</dimen>
+    <dimen name="sm_172">134.375px</dimen>
+    <dimen name="sm_259">202.34375px</dimen>
+    <dimen name="sm_51">39.84375px</dimen>
+    <dimen name="sm_41">32.03125px</dimen>
+    <dimen name="sm_398">310.9375px</dimen>
+    <dimen name="sm_459">358.59375px</dimen>
+    <dimen name="sm_746">582.8125px</dimen>
+    <dimen name="sm_390">304.6875px</dimen>
+    <dimen name="sm_199">155.46875px</dimen>
 </resources>

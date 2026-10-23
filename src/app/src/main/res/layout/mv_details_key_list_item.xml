@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="wrap_content" >
+    android:layout_height="wrap_content">
 
     <TextView
         android:id="@+id/lv_text"
@@ -16,5 +16,4 @@
         android:singleLine="true"
         android:textColor="@drawable/live_channel_item_textcolor_selector"
         android:textSize="@dimen/sm_24" />
-
 </RelativeLayout>

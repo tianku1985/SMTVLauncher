@@ -3,30 +3,25 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:descendantFocusability="afterDescendants"
-    android:orientation="vertical" >
-
+    android:orientation="vertical">
     <FrameLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_x="0.0px"
         android:layout_y="0.0px"
         android:background="@drawable/video_bg_selector"
-        android:descendantFocusability="blocksDescendants" >
-
+        android:descendantFocusability="blocksDescendants">
         <ImageView
             android:id="@+id/user_video_poster"
             android:layout_width="@dimen/sm_160"
             android:layout_height="@dimen/sm_224"
             android:scaleType="fitXY"
             android:src="@drawable/default_film_img" />
-
-
         <ImageView
             android:id="@+id/user_video_checked"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:visibility="gone" />
-
         <TextView
             android:id="@+id/user_video_state"
             style="@style/marqueeText"
@@ -38,7 +33,6 @@
             android:textColor="@color/detail_point"
             android:textSize="@dimen/sm_20" />
     </FrameLayout>
-
     <TextView
         android:id="@+id/user_video_name"
         style="@style/marqueeText"
@@ -49,5 +43,4 @@
         android:layout_y="@dimen/sm_260"
         android:textColor="@drawable/video_textcolor_selector"
         android:textSize="@dimen/sm_26" />
-
 </AbsoluteLayout>

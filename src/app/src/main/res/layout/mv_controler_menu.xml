@@ -4,17 +4,27 @@
     android:layout_height="fill_parent"
     android:background="@drawable/media_controler_background"
     android:gravity="bottom"
-    android:orientation="vertical" >
+    android:orientation="vertical">
+
+    <!--<ListView
+        android:id="@+id/media_controler_menu"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="@dimen/sm_100"
+        android:layout_marginBottom="@dimen/sm_80"
+        android:divider="#ffffcc00"
+        android:focusableInTouchMode="true"
+        android:gravity="center"
+        android:listSelector="@drawable/menu_list_selector" />-->
 
     <ListView
         android:id="@+id/media_controler_menu"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_marginBottom="@dimen/sm_80"
-        android:layout_marginTop="@dimen/sm_100"
-        android:divider="#FFCC00"
+        android:layout_marginTop="@dimen/sm_50"
+        android:layout_marginBottom="@dimen/sm_60"
+        android:divider="#ffffcc00"
         android:focusableInTouchMode="true"
-        android:listSelector="@drawable/menu_list_selector" >
-    </ListView>
-
+        android:gravity="center"
+        android:listSelector="@drawable/menu_list_selector" />
 </LinearLayout>

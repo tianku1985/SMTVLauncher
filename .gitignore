@@ -8,5 +8,10 @@
 *.war
 *.ear
 
+# Gradle wrapper 和项目内置依赖必须提交，否则 CI 无法构建
+!src/gradle/wrapper/gradle-wrapper.jar
+!src/app/libs/*.jar
+
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+*.hprof

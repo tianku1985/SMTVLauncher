@@ -3,13 +3,13 @@
     android:id="@+id/fl_item"
     android:layout_width="@dimen/sm_446"
     android:layout_height="@dimen/sm_50"
-    android:background="@drawable/listview_item_bg_selector" >
+    android:background="@drawable/listview_item_bg_selector">
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_marginLeft="@dimen/sm_10"
-        android:gravity="center_vertical" >
+        android:gravity="center_vertical">
 
         <TextView
             android:id="@+id/tv_back_time"

@@ -2,14 +2,14 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/video_details_bg" >
+    android:background="@drawable/video_details_bg">
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:orientation="vertical"
-        android:paddingRight="@dimen/sm_89"
-        android:paddingTop="@dimen/sm_15" >
+        android:paddingTop="@dimen/sm_15"
+        android:paddingRight="@dimen/sm_89">
 
         <ImageView
             android:layout_width="@dimen/sm_220"
@@ -21,8 +21,8 @@
             android:id="@+id/tvstation_gv"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
-            android:layout_marginBottom="@dimen/sm_6"
             android:layout_marginLeft="@dimen/sm_90"
+            android:layout_marginBottom="@dimen/sm_6"
             android:listSelector="@drawable/white_border"
             android:numColumns="5"
             android:paddingTop="@dimen/sm_13"

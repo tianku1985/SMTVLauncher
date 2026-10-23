@@ -4,15 +4,14 @@
     android:layout_height="fill_parent"
     android:background="@drawable/media_controler_background"
     android:gravity="bottom"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <ListView
         android:id="@+id/media_controler_menu"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_marginTop="100px"
-        android:listSelector="@drawable/menu_list_selector"
-        android:divider="#FFCC00">
-    </ListView>
+        android:divider="#FFCC00"
+        android:listSelector="@drawable/menu_list_selector"></ListView>
 
 </LinearLayout>

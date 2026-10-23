@@ -5,54 +5,42 @@ import java.util.List;
 
 /**
  * 专题
- * @author joychang
  *
+ * @author joychang
  */
 public class Topic {
 
-	private String status;
-	public Page page;
+    private String code;
+    private String msg;
+    private List<TopicInfo> data = new ArrayList<TopicInfo>();
 
+    public String getCode() {
+        return code;
+    }
 
-	private String code;
-	private String msg;
+    public void setCode(String code) {
+        this.code = code;
+    }
 
-	public static class Page{
-		public int pageindex;
-		public int pagecount;
-		public int pagesize;
-		public int recordcount;
-	}
+    public String getMsg() {
+        return msg;
+    }
 
-	private List<TopicInfo> data = new ArrayList<TopicInfo>();
+    public void setMsg(String msg) {
+        this.msg = msg;
+    }
 
-	public String getCode() {
-		return code;
-	}
+    public List<TopicInfo> getData() {
+        return data;
+    }
 
-	public void setCode(String code) {
-		this.code = code;
-	}
+    public void setData(List<TopicInfo> data) {
+        this.data = data;
+    }
 
-	public String getMsg() {
-		return msg;
-	}
-
-	public void setMsg(String msg) {
-		this.msg = msg;
-	}
-
-	public List<TopicInfo> getData() {
-		return data;
-	}
-
-	public void setData(List<TopicInfo> data) {
-		this.data = data;
-	}
-
-	@Override
-	public String toString() {
-		return "Topic [code=" + code + ", msg=" + msg + ", data=" + data + "]";
-	}
+    @Override
+    public String toString() {
+        return "Topic [code=" + code + ", msg=" + msg + ", data=" + data + "]";
+    }
 
 }
