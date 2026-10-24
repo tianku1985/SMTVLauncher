@@ -42,7 +42,7 @@ public abstract class BasePage extends FrameLayout {
     public void onShow() {
     }
 
-    protected ThemeItem theme() {
+    public ThemeItem theme() {
         return theme;
     }
 
