@@ -79,9 +79,19 @@ jobs:
         env:
           GRADLE_OPTS: '-Xmx4g -Dorg.gradle.jvmargs=-Xmx4g'
         run: |
-          set -e
+          set -eo pipefail
           chmod +x gradlew
-          ./gradlew --no-daemon --stacktrace assembleRelease
+          ./gradlew --no-daemon --stacktrace assembleRelease 2>&1 | tee gradle-build.log
+
+      - name: Report build failure
+        if: failure()
+        run: |
+          block="$(sed -n '/What went wrong/,/^\* Try/p' gradle-build.log | head -n 40)"
+          if [ -z "$block" ]; then block="$(tail -n 80 gradle-build.log)"; fi
+          block="${block//'%'/'%25'}"
+          block="${block//$'\r'/}"
+          block="${block//$'\n'/'%0A'}"
+          echo "::error::${block}"
 
       - name: Sign APK
         env:
