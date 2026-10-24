@@ -77,21 +77,9 @@ jobs:
         env:
           GRADLE_OPTS: '-Xmx4g -Dorg.gradle.jvmargs=-Xmx4g'
         run: |
-          set -eo pipefail
+          set -e
           chmod +x gradlew
-          ./gradlew --no-daemon --stacktrace :lejia:assembleRelease 2>&1 | tee gradle-build.log
-
-      - name: Report build failure
-        if: failure()
-        run: |
-          block="$(sed -n '/What went wrong/,/^\* Try/p' gradle-build.log | head -n 40)"
-          if [ -z "$block" ]; then block="$(tail -n 80 gradle-build.log)"; fi
-          errs="$(grep -E 'error:|错误' gradle-build.log | head -n 15)"
-          block="${block}"$'\n'"${errs}"
-          block="${block//'%'/'%25'}"
-          block="${block//$'\r'/}"
-          block="${block//$'\n'/'%0A'}"
-          echo "::error::${block}"
+          ./gradlew --no-daemon --stacktrace :lejia:assembleRelease
 
       - name: Sign APK
         env:
