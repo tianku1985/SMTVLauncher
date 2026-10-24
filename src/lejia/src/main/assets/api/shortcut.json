@@ -1,0 +1,30 @@
+{
+  "code": "200",
+  "msg": "ok",
+  "data": [
+    {
+      "id": "search",
+      "name": "搜索",
+      "icon": "search",
+      "action": "open_search"
+    },
+    {
+      "id": "history",
+      "name": "历史",
+      "icon": "history",
+      "action": "open_history"
+    },
+    {
+      "id": "collect",
+      "name": "收藏",
+      "icon": "collect",
+      "action": "open_collect"
+    },
+    {
+      "id": "setting",
+      "name": "设置",
+      "icon": "setting",
+      "action": "open_setting"
+    }
+  ]
+}

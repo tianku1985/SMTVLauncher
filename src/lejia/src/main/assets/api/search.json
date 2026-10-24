@@ -1,0 +1,22 @@
+{
+  "code": "200",
+  "msg": "ok",
+  "data": [
+    {
+      "title": "星际探索",
+      "nextlink": "/detail/1001",
+      "pic": "https://img.lejia.example/poster/1001.jpg",
+      "state": "HD",
+      "type": "电影",
+      "score": "9.2"
+    },
+    {
+      "title": "星际殖民",
+      "nextlink": "/detail/1011",
+      "pic": "https://img.lejia.example/poster/1011.jpg",
+      "state": "HD",
+      "type": "电影",
+      "score": "9.0"
+    }
+  ]
+}

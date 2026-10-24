@@ -1,0 +1,12 @@
+{
+  "code": "200",
+  "msg": "ok",
+  "exitinfo": "退出登录成功",
+  "data": {
+    "userid": "demo_user",
+    "username": "乐家体验用户",
+    "vip": "0",
+    "vip_endtime": "",
+    "avatar": "https://img.lejia.example/avatar/default.png"
+  }
+}

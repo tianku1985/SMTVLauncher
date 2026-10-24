@@ -1,0 +1,42 @@
+{
+  "code": "200",
+  "msg": "ok",
+  "data": [
+    {
+      "id": "t1",
+      "ztname": "科幻巨制专场",
+      "bigpic": "https://img.lejia.example/topic/sf_big.jpg",
+      "smallpic": "https://img.lejia.example/topic/sf_small.jpg",
+      "ztdescribe": "星际、未来、机甲，沉浸式科幻体验",
+      "linkurl": "/topic/sf",
+      "videotype": "movie",
+      "status": "hot",
+      "expiretime": "2027-01-01",
+      "tjwei": "1"
+    },
+    {
+      "id": "t2",
+      "ztname": "国产剧精选",
+      "bigpic": "https://img.lejia.example/topic/cn_big.jpg",
+      "smallpic": "https://img.lejia.example/topic/cn_small.jpg",
+      "ztdescribe": "热播口碑双丰收，适合全家观看",
+      "linkurl": "/topic/cn",
+      "videotype": "tv",
+      "status": "new",
+      "expiretime": "2027-02-01",
+      "tjwei": "2"
+    },
+    {
+      "id": "t3",
+      "ztname": "悬疑烧脑合集",
+      "bigpic": "https://img.lejia.example/topic/my_big.jpg",
+      "smallpic": "https://img.lejia.example/topic/my_small.jpg",
+      "ztdescribe": "真相只有一个，层层反转",
+      "linkurl": "/topic/mystery",
+      "videotype": "tv",
+      "status": "hot",
+      "expiretime": "2027-03-01",
+      "tjwei": "3"
+    }
+  ]
+}

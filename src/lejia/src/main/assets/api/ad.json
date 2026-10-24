@@ -1,0 +1,22 @@
+{
+  "code": "200",
+  "msg": "ok",
+  "data": [
+    {
+      "id": "ad1",
+      "pos": "home_banner",
+      "title": "乐家桌面新体验",
+      "img": "https://img.lejia.example/ad/banner.jpg",
+      "url": "/activity/lejia",
+      "type": "banner"
+    },
+    {
+      "id": "ad2",
+      "pos": "splash",
+      "title": "一键换肤",
+      "img": "https://img.lejia.example/ad/splash.jpg",
+      "url": "/theme",
+      "type": "splash"
+    }
+  ]
+}

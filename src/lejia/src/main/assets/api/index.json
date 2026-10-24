@@ -1,0 +1,226 @@
+{
+  "code": 200,
+  "msg": "ok",
+  "data": {
+    "baseUrl": "https://api.lejia.example/v1",
+    "version": "1.0.0",
+    "endpoints": [
+      {
+        "key": "recommend",
+        "name": "首页推荐",
+        "method": "POST",
+        "path": "/api.php/home/recommend",
+        "asset": "api/recommend.json",
+        "description": "首页轮播与推荐位数据，包含影片信息、跳转地址、推荐位置。",
+        "params": "{\"data\":\"AES(MD5) 加密报文\",\"sign\":\"Base64(RC4)\",\"time\":\"UNIX时间戳\",\"key\":\"RC4\",\"os\":\"API等级\",\"Style\":\"界面风格\"}"
+      },
+      {
+        "key": "topics",
+        "name": "精选专题",
+        "method": "POST",
+        "path": "/api.php/home/topics",
+        "asset": "api/topics.json",
+        "description": "专题列表，包含大图、小图、专题描述、跳转链接。",
+        "params": "{\"data\":\"AES(MD5) 加密报文\",\"sign\":\"Base64(RC4)\",\"time\":\"UNIX时间戳\",\"key\":\"RC4\"}"
+      },
+      {
+        "key": "classify",
+        "name": "影视分类",
+        "method": "POST",
+        "path": "/api.php/movie/classify",
+        "asset": "api/classify.json",
+        "description": "首页分类导航数据。",
+        "params": "{\"data\":\"AES(MD5) 加密报文\",\"sign\":\"Base64(RC4)\",\"time\":\"UNIX时间戳\",\"key\":\"RC4\"}"
+      },
+      {
+        "key": "vodlist",
+        "name": "影片列表",
+        "method": "POST",
+        "path": "/api.php/vod/list",
+        "asset": "api/vodlist.json",
+        "description": "分类下的影片列表，支持筛选、分页。",
+        "params": "{\"data\":\"{\\\"type\\\":\\\"movie\\\",\\\"page\\\":1}\",\"sign\":\"Base64(RC4)\",\"time\":\"UNIX时间戳\"}"
+      },
+      {
+        "key": "voddetail",
+        "name": "影片详情",
+        "method": "POST",
+        "path": "/api.php/vod/detail",
+        "asset": "api/voddetail.json",
+        "description": "影片详情、演员、简介、播放线路、剧集列表。",
+        "params": "{\"data\":\"{\\\"id\\\":\\\"1001\\\"}\",\"sign\":\"Base64(RC4)\",\"time\":\"UNIX时间戳\"}"
+      },
+      {
+        "key": "tvstation",
+        "name": "直播频道",
+        "method": "POST",
+        "path": "/api.php/tv/station",
+        "asset": "api/tvstation.json",
+        "description": "直播频道列表、台标、状态、播放链接。",
+        "params": "{\"data\":\"AES(MD5) 加密报文\",\"sign\":\"Base64(RC4)\",\"time\":\"UNIX时间戳\",\"key\":\"RC4\"}"
+      },
+      {
+        "key": "liveepg",
+        "name": "直播节目单",
+        "method": "POST",
+        "path": "/api.php/live/epg",
+        "asset": "api/liveepg.json",
+        "description": "频道节目单，按日期分组。",
+        "params": "{\"data\":\"{\\\"channelid\\\":\\\"cctv1\\\",\\\"date\\\":\\\"2026-10-23\\\"}\"}"
+      },
+      {
+        "key": "apps",
+        "name": "推荐应用",
+        "method": "POST",
+        "path": "/api.php/app/recommend",
+        "asset": "api/apps.json",
+        "description": "桌面推荐应用位。",
+        "params": "{\"data\":\"AES(MD5) 加密报文\",\"sign\":\"Base64(RC4)\",\"time\":\"UNIX时间戳\"}"
+      },
+      {
+        "key": "wallpaper",
+        "name": "壁纸列表",
+        "method": "POST",
+        "path": "/api.php/wallpaper/list",
+        "asset": "api/wallpaper.json",
+        "description": "主题壁纸资源。",
+        "params": "{\"data\":\"AES(MD5) 加密报文\",\"sign\":\"Base64(RC4)\",\"time\":\"UNIX时间戳\"}"
+      },
+      {
+        "key": "update",
+        "name": "版本更新",
+        "method": "POST",
+        "path": "/api.php/system/update",
+        "asset": "api/update.json",
+        "description": "检查更新、下载地址、强制更新标记。",
+        "params": "{\"data\":\"{\\\"version\\\":\\\"1.0.0\\\",\\\"device\\\":\\\"android\\\"}\"}"
+      },
+      {
+        "key": "notice",
+        "name": "桌面公告",
+        "method": "POST",
+        "path": "/api.php/system/notice",
+        "asset": "api/notice.json",
+        "description": "滚动公告、弹窗公告、未注册提示等。",
+        "params": "{\"data\":\"AES(MD5) 加密报文\",\"sign\":\"Base64(RC4)\",\"time\":\"UNIX时间戳\"}"
+      },
+      {
+        "key": "user",
+        "name": "用户信息",
+        "method": "POST",
+        "path": "/api.php/user/info",
+        "asset": "api/user.json",
+        "description": "用户状态、VIP、到期时间等。",
+        "params": "{\"data\":\"{\\\"token\\\":\\\"...\\\"}\"}"
+      },
+      {
+        "key": "search",
+        "name": "搜索",
+        "method": "POST",
+        "path": "/api.php/vod/search",
+        "asset": "api/search.json",
+        "description": "影片搜索，返回匹配结果。",
+        "params": "{\"data\":\"{\\\"keyword\\\":\\\"科幻\\\",\\\"page\\\":1}\"}"
+      },
+      {
+        "key": "playurl",
+        "name": "播放地址",
+        "method": "POST",
+        "path": "/api.php/vod/playurl",
+        "asset": "api/playurl.json",
+        "description": "获取播放地址、解析线路、清晰度。",
+        "params": "{\"data\":\"{\\\"id\\\":\\\"1001\\\",\\\"episode\\\":1}\"}"
+      },
+      {
+        "key": "history",
+        "name": "观看历史",
+        "method": "POST",
+        "path": "/api.php/user/history",
+        "asset": "api/history.json",
+        "description": "本地/云端观看历史。",
+        "params": "{\"data\":\"{\\\"token\\\":\\\"...\\\"}\"}"
+      },
+      {
+        "key": "collect",
+        "name": "我的收藏",
+        "method": "POST",
+        "path": "/api.php/user/collect",
+        "asset": "api/collect.json",
+        "description": "收藏列表。",
+        "params": "{\"data\":\"{\\\"token\\\":\\\"...\\\"}\"}"
+      },
+      {
+        "key": "config",
+        "name": "客户端配置",
+        "method": "GET",
+        "path": "/api.php/system/config",
+        "asset": "api/config.json",
+        "description": "开关、域名、播放器配置等。",
+        "params": "{}"
+      },
+      {
+        "key": "filter",
+        "name": "筛选条件",
+        "method": "POST",
+        "path": "/api.php/vod/filter",
+        "asset": "api/filter.json",
+        "description": "分类筛选（类型、地区、年代、排序）。",
+        "params": "{\"data\":\"{\\\"type\\\":\\\"movie\\\"}\"}"
+      },
+      {
+        "key": "p2p",
+        "name": "P2P 源列表",
+        "method": "POST",
+        "path": "/api.php/live/p2p",
+        "asset": "api/p2p.json",
+        "description": "直播 P2P 源示例结构。",
+        "params": "{\"data\":\"{\\\"channelid\\\":\\\"cctv1\\\"}\"}"
+      },
+      {
+        "key": "upload",
+        "name": "统计上报",
+        "method": "POST",
+        "path": "/api.php/system/upload",
+        "asset": "api/upload.json",
+        "description": "应用下载/启动统计上报。",
+        "params": "{\"devicecode\":\"MODEL-RELEASE\",\"packname\":\"com.example.app\"}"
+      },
+      {
+        "key": "about",
+        "name": "关于信息",
+        "method": "GET",
+        "path": "/api.php/system/about",
+        "asset": "api/about.json",
+        "description": "版本、声明、联系方式。",
+        "params": "{}"
+      },
+      {
+        "key": "menu",
+        "name": "桌面菜单",
+        "method": "GET",
+        "path": "/api.php/home/menu",
+        "asset": "api/menu.json",
+        "description": "首页底部导航菜单配置。",
+        "params": "{}"
+      },
+      {
+        "key": "ad",
+        "name": "广告位",
+        "method": "POST",
+        "path": "/api.php/ad/list",
+        "asset": "api/ad.json",
+        "description": "开屏/首页广告位。",
+        "params": "{\"data\":\"{\\\"pos\\\":\\\"home_banner\\\"}\"}"
+      },
+      {
+        "key": "shortcut",
+        "name": "快捷入口",
+        "method": "GET",
+        "path": "/api.php/home/shortcut",
+        "asset": "api/shortcut.json",
+        "description": "首页快捷入口配置。",
+        "params": "{}"
+      }
+    ]
+  }
+}

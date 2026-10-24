@@ -1,0 +1,19 @@
+{
+  "code": "200",
+  "msg": "ok",
+  "data": {
+    "app_name": "乐家桌面",
+    "version": "1.0.0",
+    "debug": false,
+    "ad_enabled": true,
+    "force_update": false,
+    "player": {
+      "default": "ijk",
+      "use_exo": true
+    },
+    "domain": {
+      "api": "https://api.lejia.example/v1",
+      "cdn": "https://cdn.lejia.example"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "code": "200",
+  "msg": "ok",
+  "data": [
+    {
+      "id": "1",
+      "channelpic": "https://img.lejia.example/tv/cctv1.png",
+      "channelid": "cctv1",
+      "channelname": "CCTV-1 综合",
+      "channelstatus": "直播中",
+      "channellink": "http://live.lejia.example/cctv1.m3u8"
+    },
+    {
+      "id": "2",
+      "channelpic": "https://img.lejia.example/tv/cctv6.png",
+      "channelid": "cctv6",
+      "channelname": "CCTV-6 电影",
+      "channelstatus": "直播中",
+      "channellink": "http://live.lejia.example/cctv6.m3u8"
+    },
+    {
+      "id": "3",
+      "channelpic": "https://img.lejia.example/tv/hunan.png",
+      "channelid": "hunan",
+      "channelname": "湖南卫视",
+      "channelstatus": "直播中",
+      "channellink": "http://live.lejia.example/hunan.m3u8"
+    },
+    {
+      "id": "4",
+      "channelpic": "https://img.lejia.example/tv/zhejiang.png",
+      "channelid": "zhejiang",
+      "channelname": "浙江卫视",
+      "channelstatus": "直播中",
+      "channellink": "http://live.lejia.example/zhejiang.m3u8"
+    }
+  ]
+}

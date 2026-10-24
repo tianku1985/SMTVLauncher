@@ -1,0 +1,12 @@
+{
+  "code": "200",
+  "msg": "ok",
+  "data": {
+    "name": "乐家桌面",
+    "version": "1.0.0",
+    "desc": "基于原 SMTVLauncher 项目结构，新增乐家桌面模块，支持一键切换主题、内置全量 JSON 接口演示、兼容 Android 4.4。",
+    "author": "Lejia",
+    "email": "dev@lejia.example",
+    "website": "https://github.com/loamen/SMTVLauncher"
+  }
+}

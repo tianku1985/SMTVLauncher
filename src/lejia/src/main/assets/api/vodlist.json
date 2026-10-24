@@ -1,0 +1,49 @@
+{
+  "code": "200",
+  "msg": "ok",
+  "pageindex": 1,
+  "videonum": 4,
+  "totalpage": 1,
+  "data": [
+    {
+      "title": "星际探索",
+      "nextlink": "/detail/1001",
+      "pic": "https://img.lejia.example/poster/1001.jpg",
+      "state": "HD",
+      "type": "电影",
+      "score": "9.2",
+      "blurb": "人类跨越星海，寻找新家园的史诗冒险",
+      "pic_slide": "https://img.lejia.example/slide/1001.jpg"
+    },
+    {
+      "title": "都市情缘",
+      "nextlink": "/detail/1002",
+      "pic": "https://img.lejia.example/poster/1002.jpg",
+      "state": "更新至36集",
+      "type": "电视剧",
+      "score": "9.0",
+      "blurb": "职场与情感交织的都市温情故事",
+      "pic_slide": "https://img.lejia.example/slide/1002.jpg"
+    },
+    {
+      "title": "悬疑迷案",
+      "nextlink": "/detail/1003",
+      "pic": "https://img.lejia.example/poster/1003.jpg",
+      "state": "已完结",
+      "type": "电视剧",
+      "score": "9.4",
+      "blurb": "连环谜案背后的真相",
+      "pic_slide": "https://img.lejia.example/slide/1003.jpg"
+    },
+    {
+      "title": "热血格斗",
+      "nextlink": "/detail/1004",
+      "pic": "https://img.lejia.example/poster/1004.jpg",
+      "state": "更新至12集",
+      "type": "动漫",
+      "score": "9.3",
+      "blurb": "少年为梦想挑战巅峰",
+      "pic_slide": "https://img.lejia.example/slide/1004.jpg"
+    }
+  ]
+}

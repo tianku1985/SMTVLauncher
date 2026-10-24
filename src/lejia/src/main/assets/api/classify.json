@@ -1,0 +1,41 @@
+{
+  "code": "200",
+  "msg": "ok",
+  "data": [
+    {
+      "ztname": "电影",
+      "zttype": "movie",
+      "ztwei": "1",
+      "ztpicurl": "",
+      "zturl": "/vod/movie"
+    },
+    {
+      "ztname": "电视剧",
+      "zttype": "tv",
+      "ztwei": "2",
+      "ztpicurl": "",
+      "zturl": "/vod/tv"
+    },
+    {
+      "ztname": "综艺",
+      "zttype": "variety",
+      "ztwei": "3",
+      "ztpicurl": "",
+      "zturl": "/vod/variety"
+    },
+    {
+      "ztname": "动漫",
+      "zttype": "anime",
+      "ztwei": "4",
+      "ztpicurl": "",
+      "zturl": "/vod/anime"
+    },
+    {
+      "ztname": "纪录片",
+      "zttype": "documentary",
+      "ztwei": "5",
+      "ztpicurl": "",
+      "zturl": "/vod/documentary"
+    }
+  ]
+}

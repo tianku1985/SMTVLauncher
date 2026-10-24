@@ -1,0 +1,77 @@
+{
+  "code": "200",
+  "msg": "ok",
+  "data": {
+    "id": "1001",
+    "title": "星际探索",
+    "top_type": "movie",
+    "trunk": "科幻 / 冒险 / 2026",
+    "img_url": "https://img.lejia.example/poster/1001.jpg",
+    "intro": "在地球资源枯竭的未来，人类派出星际远征队前往宜居星球，途中遭遇未知文明与时空危机。",
+    "is_finish": "1",
+    "pubtime": "2026-05-20",
+    "cur_episode": "1",
+    "max_episode": "1",
+    "season_num": "1",
+    "raing": "9.2",
+    "play_filter": "",
+    "foreign_ip": "0",
+    "actor": [
+      "林远",
+      "陈星"
+    ],
+    "director": [
+      "周航"
+    ],
+    "area": [
+      "中国大陆"
+    ],
+    "type": [
+      "科幻",
+      "冒险"
+    ],
+    "about": {
+      "actor": [],
+      "similary": [
+        {
+          "title": "银河守望",
+          "nextlink": "/detail/1010",
+          "pic": "https://img.lejia.example/poster/1010.jpg",
+          "state": "HD",
+          "type": "电影",
+          "score": "9.1"
+        },
+        {
+          "title": "星际殖民",
+          "nextlink": "/detail/1011",
+          "pic": "https://img.lejia.example/poster/1011.jpg",
+          "state": "HD",
+          "type": "电影",
+          "score": "9.0"
+        }
+      ]
+    },
+    "video_list": [
+      {
+        "type": "线路一",
+        "name": "默认线路",
+        "parse": [
+          "https://parse.lejia.example/1"
+        ],
+        "duration": "02:08:36",
+        "list": [
+          {
+            "title": "正片",
+            "url": "https://cdn.lejia.example/play/1001/1.m3u8"
+          }
+        ],
+        "lists": [
+          {
+            "title": "正片",
+            "url": "https://cdn.lejia.example/play/1001/1.m3u8"
+          }
+        ]
+      }
+    ]
+  }
+}

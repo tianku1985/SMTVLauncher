@@ -1,0 +1,36 @@
+{
+  "code": "200",
+  "msg": "ok",
+  "data": [
+    {
+      "id": "home",
+      "name": "首页",
+      "icon": "home",
+      "sort": 1
+    },
+    {
+      "id": "app",
+      "name": "应用",
+      "icon": "app",
+      "sort": 2
+    },
+    {
+      "id": "media",
+      "name": "影音",
+      "icon": "media",
+      "sort": 3
+    },
+    {
+      "id": "theme",
+      "name": "主题",
+      "icon": "theme",
+      "sort": 4
+    },
+    {
+      "id": "setting",
+      "name": "设置",
+      "icon": "setting",
+      "sort": 5
+    }
+  ]
+}

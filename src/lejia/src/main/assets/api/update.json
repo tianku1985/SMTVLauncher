@@ -1,0 +1,14 @@
+{
+  "code": "200",
+  "msg": "ok",
+  "data": {
+    "id": "1",
+    "nowversion": "1.0.0",
+    "updateversion": "1.0.1",
+    "versionremark": "优化主题切换体验，新增 JSON 接口演示页",
+    "apkurl": "https://cdn.lejia.example/apk/lejia-launcher-1.0.1.apk",
+    "type": "0",
+    "fromplat": "official",
+    "devicetype": "android"
+  }
+}

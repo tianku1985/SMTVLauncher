@@ -1,0 +1,20 @@
+{
+  "code": "200",
+  "msg": "ok",
+  "data": [
+    {
+      "filmId": "cctv1",
+      "serviceId": "demo_service_1",
+      "filmname": "CCTV-1",
+      "linkid": "link_1",
+      "domain": "p2p.lejia.example"
+    },
+    {
+      "filmId": "hunan",
+      "serviceId": "demo_service_2",
+      "filmname": "湖南卫视",
+      "linkid": "link_2",
+      "domain": "p2p.lejia.example"
+    }
+  ]
+}

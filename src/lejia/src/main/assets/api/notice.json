@@ -1,0 +1,42 @@
+{
+  "code": 200,
+  "msg": "ok",
+  "data": {
+    "notice": {
+      "content": "欢迎使用乐家桌面 Demo",
+      "status": "1",
+      "title": "欢迎",
+      "type": "info"
+    },
+    "roll_notice": {
+      "content": "支持一键切换主题，内置全部 JSON 接口示例，兼容 Android 4.4",
+      "status": "1",
+      "title": "滚动公告",
+      "type": "marquee"
+    },
+    "home_notice": {
+      "content": "按菜单键可快速切换主题",
+      "status": "1",
+      "title": "提示",
+      "type": "tip"
+    },
+    "un_register": {
+      "content": "未登录用户可体验全部功能",
+      "status": "1",
+      "title": "提示",
+      "type": "info"
+    },
+    "registerd": {
+      "content": "已登录",
+      "status": "0",
+      "title": "状态",
+      "type": "info"
+    },
+    "game_notice": {
+      "content": "",
+      "status": "0",
+      "title": "",
+      "type": ""
+    }
+  }
+}

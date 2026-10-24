@@ -1,0 +1,55 @@
+{
+  "status": "1",
+  "code": "200",
+  "msg": "ok",
+  "data": [
+    {
+      "id": "1",
+      "tjinfo": "星际探索",
+      "tjid": "1001",
+      "tjtype": "movie",
+      "tjstarttime": "2026-10-01",
+      "tjendtime": "2026-12-31",
+      "tjpicur": "https://img.lejia.example/banner/star.jpg",
+      "tjwei": "banner",
+      "tjurl": "/detail/1001",
+      "state": "科幻冒险"
+    },
+    {
+      "id": "2",
+      "tjinfo": "都市情缘",
+      "tjid": "1002",
+      "tjtype": "tv",
+      "tjstarttime": "2026-09-15",
+      "tjendtime": "2027-01-15",
+      "tjpicur": "https://img.lejia.example/banner/love.jpg",
+      "tjwei": "banner",
+      "tjurl": "/detail/1002",
+      "state": "连载中"
+    },
+    {
+      "id": "3",
+      "tjinfo": "悬疑迷案",
+      "tjid": "1003",
+      "tjtype": "tv",
+      "tjstarttime": "2026-08-10",
+      "tjendtime": "2026-11-10",
+      "tjpicur": "https://img.lejia.example/banner/mystery.jpg",
+      "tjwei": "pos1",
+      "tjurl": "/detail/1003",
+      "state": "高分悬疑"
+    },
+    {
+      "id": "4",
+      "tjinfo": "热血格斗",
+      "tjid": "1004",
+      "tjtype": "anime",
+      "tjstarttime": "2026-07-01",
+      "tjendtime": "2026-12-01",
+      "tjpicur": "https://img.lejia.example/banner/fight.jpg",
+      "tjwei": "pos2",
+      "tjurl": "/detail/1004",
+      "state": "周更"
+    }
+  ]
+}

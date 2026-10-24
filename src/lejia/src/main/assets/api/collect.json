@@ -1,0 +1,18 @@
+{
+  "code": "200",
+  "msg": "ok",
+  "data": [
+    {
+      "id": "1003",
+      "title": "悬疑迷案",
+      "pic": "https://img.lejia.example/poster/1003.jpg",
+      "addtime": "2026-10-20"
+    },
+    {
+      "id": "1004",
+      "title": "热血格斗",
+      "pic": "https://img.lejia.example/poster/1004.jpg",
+      "addtime": "2026-10-19"
+    }
+  ]
+}

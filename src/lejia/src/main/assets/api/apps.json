@@ -1,0 +1,20 @@
+{
+  "code": "200",
+  "msg": "ok",
+  "data": [
+    {
+      "tjinfo": "应用市场",
+      "tjapk": "https://cdn.lejia.example/apk/market.apk",
+      "tjtype": "big",
+      "tjpicur": "https://img.lejia.example/app/market.png",
+      "packname": "com.lejia.market"
+    },
+    {
+      "tjinfo": "播放器",
+      "tjapk": "https://cdn.lejia.example/apk/player.apk",
+      "tjtype": "small",
+      "tjpicur": "https://img.lejia.example/app/player.png",
+      "packname": "com.lejia.player"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "code": "200",
+  "msg": "ok",
+  "data": [
+    {
+      "id": "1",
+      "skinname": "星空",
+      "skinpath": "https://img.lejia.example/wall/starry.jpg",
+      "status": "1"
+    },
+    {
+      "id": "2",
+      "skinname": "山水",
+      "skinpath": "https://img.lejia.example/wall/mountain.jpg",
+      "status": "1"
+    },
+    {
+      "id": "3",
+      "skinname": "极光",
+      "skinpath": "https://img.lejia.example/wall/aurora.jpg",
+      "status": "1"
+    }
+  ]
+}
