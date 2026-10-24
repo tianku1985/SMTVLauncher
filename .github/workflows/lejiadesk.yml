@@ -86,6 +86,8 @@ jobs:
         run: |
           block="$(sed -n '/What went wrong/,/^\* Try/p' gradle-build.log | head -n 40)"
           if [ -z "$block" ]; then block="$(tail -n 80 gradle-build.log)"; fi
+          errs="$(grep -E 'error:|错误' gradle-build.log | head -n 15)"
+          block="${block}"$'\n'"${errs}"
           block="${block//'%'/'%25'}"
           block="${block//$'\r'/}"
           block="${block//$'\n'/'%0A'}"
