@@ -1,4 +1,4 @@
-﻿package com.lejia.launcher.page;
+package com.lejia.launcher.page;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -28,7 +28,8 @@ import java.util.Calendar;
 import java.util.List;
 
 /**
- * 棣栭〉锛氶棶鍊欍€佹帹鑽愬簲鐢ㄣ€佺儹闂ㄦ帹鑽愩€佺簿閫変笓棰樸€佹粴鍔ㄥ叕鍛娿€? */
+ * 首页：问候、推荐应用、热门推荐、精选专题、滚动公告。
+ */
 public class HomePage extends BasePage {
 
     private LinearLayout appContainer;
@@ -59,7 +60,7 @@ public class HomePage extends BasePage {
         content.addView(buildNoticeSection());
 
         TextView footer = Ui.text(context,
-                "鎵€鏈夊崱鐗囨暟鎹潎鏉ヨ嚜 assets/api/*.json锛屽彲绂荤嚎鏌ョ湅瀹屾暣鎺ュ彛婕旂ず銆?,
+                "所有卡片数据均来自 assets/api/*.json，可离线查看完整接口演示。",
                 12, theme.getTextSecondary(), false);
         LinearLayout.LayoutParams footerParams = Ui.lparams(
                 ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
@@ -81,7 +82,7 @@ public class HomePage extends BasePage {
         left.addView(greeting);
 
         TextView subtitle = Ui.text(context,
-                "娆㈣繋鍥炲埌涔愬妗岄潰 路 褰撳墠涓婚銆? + theme.getName() + "銆?,
+                "欢迎回到乐家桌面 · 当前主题【" + theme.getName() + "】",
                 14, theme.getTextSecondary(), false);
         LinearLayout.LayoutParams subtitleParams = Ui.lparams(
                 ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
@@ -95,7 +96,7 @@ public class HomePage extends BasePage {
         actionParams.topMargin = Ui.dp(context, 18);
         actions.setLayoutParams(actionParams);
 
-        TextView themeButton = actionButton("涓€閿崲鑲?);
+        TextView themeButton = actionButton("一键换肤");
         themeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -104,7 +105,7 @@ public class HomePage extends BasePage {
         });
         actions.addView(themeButton);
 
-        TextView apiButton = ghostButton("JSON 鎺ュ彛婕旂ず");
+        TextView apiButton = ghostButton("JSON 接口演示");
         LinearLayout.LayoutParams apiParams = Ui.lparams(
                 ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         apiParams.leftMargin = Ui.dp(context, 12);
@@ -124,11 +125,11 @@ public class HomePage extends BasePage {
         right.setLayoutParams(Ui.lparams(Ui.dp(context, 220),
                 ViewGroup.LayoutParams.WRAP_CONTENT));
 
-        TextView tag = Ui.text(context, "LEJIA / 涓婚妗岄潰", 12, theme.getAccent(), true);
+        TextView tag = Ui.text(context, "LEJIA / 主题桌面", 12, theme.getAccent(), true);
         tag.setGravity(Gravity.RIGHT);
         right.addView(tag);
 
-        TextView stat = Ui.text(context, "6 濂椾富棰榎n24 涓?JSON 鎺ュ彛",
+        TextView stat = Ui.text(context, "6 套主题\n24 个 JSON 接口",
                 16, theme.getTextPrimary(), true);
         stat.setGravity(Gravity.RIGHT);
         stat.setLineSpacing(Ui.dp(context, 4), 1f);
@@ -138,7 +139,7 @@ public class HomePage extends BasePage {
         stat.setLayoutParams(statParams);
         right.addView(stat);
 
-        TextView hint = Ui.text(context, "鎸夈€岃彍鍗曘€嶉敭涔熷彲鎹㈣偆", 12,
+        TextView hint = Ui.text(context, "按『菜单』键也可换肤", 12,
                 theme.getTextSecondary(), false);
         hint.setGravity(Gravity.RIGHT);
         LinearLayout.LayoutParams hintParams = Ui.lparams(
@@ -153,7 +154,7 @@ public class HomePage extends BasePage {
 
     private View buildAppsSection() {
         LinearLayout section = Ui.linear(context, LinearLayout.VERTICAL);
-        section.addView(sectionHeader("鎺ㄨ崘搴旂敤", "鍏ㄩ儴搴旂敤", new View.OnClickListener() {
+        section.addView(sectionHeader("推荐应用", "全部应用", new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 host().openPage(1);
@@ -173,7 +174,7 @@ public class HomePage extends BasePage {
         appContainer.removeAllViews();
         List<AppEntry> cache = AppRepository.getCache();
         if (cache == null) {
-            TextView loading = Ui.text(context, "姝ｅ湪鎵弿宸插畨瑁呭簲鐢ㄢ€?, 14,
+            TextView loading = Ui.text(context, "正在扫描已安装应用…", 14,
                     theme.getTextSecondary(), false);
             loading.setPadding(0, Ui.dp(context, 8), 0, Ui.dp(context, 8));
             appContainer.addView(loading);
@@ -199,7 +200,7 @@ public class HomePage extends BasePage {
             }
         }
         if (visible.isEmpty()) {
-            TextView empty = Ui.text(context, "鏈彂鐜板彲鍚姩搴旂敤锛屽彲鍦ㄨ缃腑寮€鍚郴缁熷簲鐢ㄣ€?,
+            TextView empty = Ui.text(context, "未发现可启动应用，可在设置中开启系统应用。",
                     14, theme.getTextSecondary(), false);
             empty.setPadding(0, Ui.dp(context, 8), 0, Ui.dp(context, 8));
             appContainer.addView(empty);
@@ -266,7 +267,7 @@ public class HomePage extends BasePage {
 
     private View buildRecommendSection() {
         LinearLayout section = Ui.linear(context, LinearLayout.VERTICAL);
-        section.addView(sectionHeader("鐑棬鎺ㄨ崘", "鏌ョ湅鎺ュ彛", new View.OnClickListener() {
+        section.addView(sectionHeader("热门推荐", "查看接口", new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 host().openEndpoint("recommend");
@@ -310,10 +311,10 @@ public class HomePage extends BasePage {
                 });
 
                 TextView type = Ui.text(context,
-                        item.optString("tjtype", "鎺ㄨ崘"), 11, theme.getAccent(), true);
+                        item.optString("tjtype", "推荐"), 11, theme.getAccent(), true);
                 card.addView(type);
 
-                TextView title = Ui.text(context, item.optString("tjinfo", "鏈懡鍚嶅唴瀹?),
+                TextView title = Ui.text(context, item.optString("tjinfo", "未命名内容"),
                         18, theme.getTextPrimary(), true);
                 title.setSingleLine(true);
                 title.setEllipsize(TextUtils.TruncateAt.END);
@@ -327,7 +328,7 @@ public class HomePage extends BasePage {
                 spacer.setLayoutParams(Ui.lparams(1, 0, 1f));
                 card.addView(spacer);
 
-                TextView state = Ui.text(context, item.optString("state", "鐐瑰嚮鏌ョ湅 JSON"),
+                TextView state = Ui.text(context, item.optString("state", "点击查看 JSON"),
                         12, theme.getTextSecondary(), false);
                 state.setSingleLine(true);
                 state.setEllipsize(TextUtils.TruncateAt.END);
@@ -341,7 +342,7 @@ public class HomePage extends BasePage {
 
     private View buildTopicSection() {
         LinearLayout section = Ui.linear(context, LinearLayout.VERTICAL);
-        section.addView(sectionHeader("绮鹃€変笓棰?, "涓撻鎺ュ彛", new View.OnClickListener() {
+        section.addView(sectionHeader("精选专题", "专题接口", new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 host().openEndpoint("topics");
@@ -382,7 +383,7 @@ public class HomePage extends BasePage {
                     }
                 });
 
-                TextView name = Ui.text(context, item.optString("ztname", "涓撻"),
+                TextView name = Ui.text(context, item.optString("ztname", "专题"),
                         17, theme.getTextPrimary(), true);
                 name.setSingleLine(true);
                 name.setEllipsize(TextUtils.TruncateAt.END);
@@ -402,7 +403,7 @@ public class HomePage extends BasePage {
                 spacer.setLayoutParams(Ui.lparams(1, 0, 1f));
                 card.addView(spacer);
 
-                TextView status = Ui.text(context, item.optString("status", "涓婄嚎"),
+                TextView status = Ui.text(context, item.optString("status", "上线"),
                         11, theme.getAccent(), true);
                 card.addView(status);
                 row.addView(card);
@@ -414,14 +415,14 @@ public class HomePage extends BasePage {
 
     private View buildNoticeSection() {
         LinearLayout section = Ui.linear(context, LinearLayout.VERTICAL);
-        section.addView(sectionHeader("妗岄潰鍏憡", "鍏憡鎺ュ彛", new View.OnClickListener() {
+        section.addView(sectionHeader("桌面公告", "公告接口", new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 host().openEndpoint("notice");
             }
         }));
 
-        String content = "娆㈣繋浣跨敤涔愬妗岄潰 Demo锛屾寜鑿滃崟閿垨鐐瑰嚮鍙充笂瑙掑嵆鍙竴閿崲鑲ゃ€?;
+        String content = "欢迎使用乐家桌面 Demo，按菜单键或点击右上角即可一键换肤。";
         JSONObject root = JsonUtils.readObject(context, "api/notice.json");
         JSONObject data = JsonUtils.dataObject(root);
         if (data != null) {
@@ -511,19 +512,18 @@ public class HomePage extends BasePage {
     private String greetingText() {
         int hour = Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
         if (hour < 6) {
-            return "澶滄繁浜嗭紝娉ㄦ剰浼戞伅";
+            return "夜深了，注意休息";
         }
         if (hour < 12) {
-            return "鏃╀笂濂斤紝浠婂ぉ涔熻寮€蹇?;
+            return "早上好，今天也要开心";
         }
         if (hour < 18) {
-            return "涓嬪崍濂斤紝娆㈣繋鍥炲";
+            return "下午好，欢迎回家";
         }
-        return "鏅氫笂濂斤紝浜彈澶у睆鏃跺厜";
+        return "晚上好，享受大屏时光";
     }
 
     private LauncherHost host() {
         return (LauncherHost) context;
     }
 }
-
